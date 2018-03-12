@@ -19,6 +19,9 @@ const stylelint = require("gulp-stylelint");
 const rename = require("gulp-rename");
 const server = require("browser-sync").create();
 const sequence = require("run-sequence");
+const babel = require("gulp-babel");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
 
 // Создаем таск для сборки html файлов
 gulp.task("html", () => {
@@ -73,6 +76,20 @@ gulp.task("css", () => {
       .pipe(server.stream())
   );
 });
+
+// Создаем таск для сборки js файлов
+gulp.task("js", () =>
+  gulp
+    .src("src/js/**/*.js")
+    .pipe(
+      babel({
+        presets: ["env"]
+      })
+    )
+    .pipe(concat("bundle.min.js"))      
+    .pipe(uglify("bundle.min.js"))
+    .pipe(gulp.dest("./build/js"))
+);
 
 // Переводим png и jpg в webP
 gulp.task("webp", () => {
@@ -129,6 +146,8 @@ gulp.task("watch", () => {
   gulp.watch("./src/*.html", ["html"]);
   // Следим за изменениями в любом sass файле и вызываем таск 'css' на каждом изменении
   gulp.watch("./src/sass/**/*.scss", ["css"]);
+  // Следим за изменениями в любом js файле и вызываем таск 'js' на каждом изменении
+  gulp.watch("./src/js/**/*.js", ["js"]);  
   // Следим за изменениями картинок и вызываем таск 'img' на каждом изменении
   // gulp.watch("./src/img/**/*.*", ["webp", "img"]);
 });
@@ -166,6 +185,7 @@ gulp.task("build", function(done) {
     "fonts",
     "css",
     "html",
+    "js",
     done
   );
 });
