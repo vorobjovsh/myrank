@@ -11,14 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axZerk/gulp-starter-kit.git"
+    "url": ""
   },
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/axZerk/gulp-starter-kit/issues"
-  },
-  "homepage": "https://github.com/axZerk/gulp-starter-kit#readme",
+  "homepage": "",
   "devDependencies": {
     "autoprefixer": "^8.0.0",
     "babel-core": "^6.26.0",
@@ -29,6 +26,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
+    "gulp-file-include": "^2.0.1",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-merge-media-queries": "^0.2.1",
@@ -36,6 +34,7 @@
     "gulp-postcss": "^7.0.1",
     "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
     "gulp-stylelint": "^6.0.0",
     "gulp-svgstore": "^6.1.1",

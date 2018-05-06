@@ -1,4 +1,23 @@
 /*
    Import partials below
 */
-@import "normalize";
+@import "utils/variables.scss";
+@import "utils/functions.scss";
+@import "utils/mixins.scss";
+
+@import "base/reset.scss";
+@import "base/base.scss";
+
+@import "components/typography.scss";
+@import "components/header-str.scss";
+@import "components/main-str.scss";
+@import "components/create-str.scss";
+@import "components/subdivision-str.scss";
+@import "components/addcontacts-str.scss";
+@import "components/infoadmin-str.scss";
+@import "components/employ-str.scss";
+@import "components/infouser-str.scss";
+@import "components/adminvisible-str.scss";
+@import "components/uservisible-str.scss";
+@import "components/footer-str.scss";
+@import "components/button-str.scss";

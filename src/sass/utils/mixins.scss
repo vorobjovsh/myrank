@@ -1,0 +1,47 @@
+@mixin flex-center{
+    -js-display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-col{
+    -js-display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between-col{
+    -js-display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-around{
+    -js-display: flex;
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin flex-between{
+    -js-display: flex;
+    display: flex;
+    justify-content:space-between;
+}
+
+@mixin padding-border{
+    padding: rem(5px) rem(10px);
+    background-color: #e2e7e9;
+    border-radius: rem(8px);
+}
+
+@mixin flex-start{
+    -js-display: flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

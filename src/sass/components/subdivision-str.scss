@@ -1,0 +1,28 @@
+.subdivision-str {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  height: 554px;
+  @include flex-between;
+}
+
+.subdivision-str__left {
+  border-right: 1px solid #dcdcdc;
+  flex-basis: 20%;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.subdivision-str__leftblock {
+    @include flex-center-col;
+}
+
+.subdivision-str__imgcompany {
+  display: block;
+  width: 105px;
+  height: 105px;
+  margin-bottom: 15px;
+}
+
+.subdivision-str__content {
+  flex-basis: 80%;
+}
