@@ -106,3 +106,24 @@
   }
 
 }
+
+.uservisible-str__link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #226377;
+}
+
+.uservisible-str__sublink {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #333;
+
+  &:hover {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #333;
+  }
+}
