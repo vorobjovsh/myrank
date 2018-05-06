@@ -6,6 +6,7 @@ function addCompany(evt) {
   evt.preventDefault();
   maket1.classList.add("js-none");
   maket2.classList.add("js-block");
+  subdivision();
 }
 
 createStr.addEventListener("click", addCompany);
