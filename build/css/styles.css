@@ -69,6 +69,12 @@ p{
 	text-align: center;
 }
 
+.wrapper-str--fl-between {
+	-js-display: flex;
+	display: flex;
+	justify-content: space-between;
+}
+
 .wrapper-str--mf {
 	border-top: none;
 	text-align: center;

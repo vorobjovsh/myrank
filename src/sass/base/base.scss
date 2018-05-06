@@ -51,6 +51,10 @@ p{
     text-align: center;
   }
 
+  &--fl-between {
+    @include flex-between;
+  }
+
   &--mf {
     border-top: none;
     text-align: center;
