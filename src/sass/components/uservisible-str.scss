@@ -78,7 +78,6 @@
 .uservisible-str__subitem {
   width: 230px;
   position: relative;
-
 }
 
 .uservisible-str__sublink {
@@ -88,12 +87,58 @@
   margin-bottom: 10px;
   cursor: pointer;
   border: 1px solid #cfe0db;
+  position: relative;
 
   &:hover {
     text-decoration: none;
     border: 1px solid #f95200;
     box-sizing: border-box;
   }
+
+  &--number {
+    position: absolute;
+    top: 12px;
+    left: 112px;
+    display: block;
+    cursor: pointer;
+  }
+
+  &--man {
+    position: absolute;
+    background-image: url(../img/man-mini.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    top: 15px;
+    left: 130px;
+    display: block;
+    width: 22px;
+    height: 14px;
+  }
+
+  &--call {
+    position: absolute;
+    background-image: url(../img/call-mini.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    top: 15px;
+    left: 150px;
+    display: block;
+    width: 22px;
+    height: 14px;
+  }
+
+  &--gps {
+    position: absolute;
+    background-image: url(../img/gps-mini.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    top: 15px;
+    left: 174px;
+    display: block;
+    width: 22px;
+    height: 16px;
+  }
+
 }
 
 .uservisible-str__sublist > .uservisible-str__subitem:nth-child(1)::before {
@@ -115,3 +160,4 @@
     height: 1px;
     background: #f95200;
 }
+
