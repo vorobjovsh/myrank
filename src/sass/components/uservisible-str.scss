@@ -18,24 +18,65 @@
   width: 230px;
   position: relative;
 
-  &::before {
-    content: '';
-  }
 
   &--mark {
     background-image: url(../img/arrow-bottom.png);
     background-repeat: no-repeat;
-    background-position: 198px center;
+    background-position: 202px center;
   }
 
   &--mark-right {
     background-image: url(../img/arrow-sub.png);
     background-repeat: no-repeat;
-    background-position: 204px center;
+    background-position: 208px center;
+  }
+
+  &--addmain {
+    background-image: url(../img/plus.jpg);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    border: 1px solid #f95200;
+    width: 230px;
+    position: relative;
+
+    &::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: -11px;
+    width: 10px;
+    height: 1px;
+    background: #f95200;
+    }
+
   }
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  &--trash {
+    position: absolute;
+    background-image: url(../img/trash-admin.jpg);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    top: -6px;
+    left: 214px;
+    display: block;
+    width: 25px;
+    height: 23px;
+  }
+
+  &--pens {
+    position: absolute;
+    background-image: url(../img/pens.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    top: 15px;
+    left: 183px;
+    display: block;
+    width: 23px;
+    height: 14px;
   }
 
 }
@@ -133,6 +174,18 @@
     background-repeat: no-repeat;
     background-position: 5px center;
     top: 15px;
+    left: 169px;
+    display: block;
+    width: 22px;
+    height: 16px;
+  }
+
+  &--trash {
+    position: absolute;
+    background-image: url(../img/trash-admin.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    top: 15px;
     left: 174px;
     display: block;
     width: 22px;
@@ -161,3 +214,15 @@
     background: #f95200;
 }
 
+.uservisible-str__link--addmain {
+  display: block;
+  padding: 10px 10px 12px 40px;
+  cursor: pointer;
+  border: 1px solid #f95200;
+  position: relative;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}

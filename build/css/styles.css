@@ -258,6 +258,13 @@ p{
 	color: #256579;
 }
 
+.uservisible-str__link--addmain {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: #333;
+}
+
 .header-str {
 	padding: 0 15px;
 	-js-display: flex;
@@ -325,6 +332,10 @@ p{
 	padding: 15px 10px 0;
 }
 
+.subdivision-str__content--admin {
+	overflow-x: auto;
+}
+
 .uservisible-str {
 	list-style: none;
 	padding-left: 0;
@@ -346,24 +357,63 @@ p{
 	position: relative;
 }
 
-.uservisible-str__item::before {
-	content: '';
-}
-
 .uservisible-str__item--mark {
 	background-image: url(../img/arrow-bottom.png);
 	background-repeat: no-repeat;
-	background-position: 198px center;
+	background-position: 202px center;
 }
 
 .uservisible-str__item--mark-right {
 	background-image: url(../img/arrow-sub.png);
 	background-repeat: no-repeat;
-	background-position: 204px center;
+	background-position: 208px center;
+}
+
+.uservisible-str__item--addmain {
+	background-image: url(../img/plus.jpg);
+	background-repeat: no-repeat;
+	background-position: 8px center;
+	border: 1px solid #f95200;
+	width: 230px;
+	position: relative;
+}
+
+.uservisible-str__item--addmain::before {
+	content: '';
+	position: absolute;
+	top: 22px;
+	left: -11px;
+	width: 10px;
+	height: 1px;
+	background: #f95200;
 }
 
 .uservisible-str__item:last-of-type {
 	margin-bottom: 0;
+}
+
+.uservisible-str__item--trash {
+	position: absolute;
+	background-image: url(../img/trash-admin.jpg);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	top: -6px;
+	left: 214px;
+	display: block;
+	width: 25px;
+	height: 23px;
+}
+
+.uservisible-str__item--pens {
+	position: absolute;
+	background-image: url(../img/pens.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	top: 15px;
+	left: 183px;
+	display: block;
+	width: 23px;
+	height: 14px;
 }
 
 .uservisible-str__link {
@@ -456,6 +506,18 @@ p{
 	background-repeat: no-repeat;
 	background-position: 5px center;
 	top: 15px;
+	left: 169px;
+	display: block;
+	width: 22px;
+	height: 16px;
+}
+
+.uservisible-str__sublink--trash {
+	position: absolute;
+	background-image: url(../img/trash-admin.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	top: 15px;
 	left: 174px;
 	display: block;
 	width: 22px;
@@ -480,6 +542,18 @@ p{
 	width: 10px;
 	height: 1px;
 	background: #f95200;
+}
+
+.uservisible-str__link--addmain {
+	display: block;
+	padding: 10px 10px 12px 40px;
+	cursor: pointer;
+	border: 1px solid #f95200;
+	position: relative;
+}
+
+.uservisible-str__link--addmain:hover {
+	text-decoration: none;
 }
 
 .footer-str {

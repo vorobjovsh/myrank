@@ -26,4 +26,9 @@
 .subdivision-str__content {
   flex-basis: 80%;
   padding: 15px 10px 0;
+
+  &--admin {
+    overflow-x: auto;
+  }
+
 }
