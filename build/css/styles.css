@@ -314,6 +314,13 @@ p{
 	color: #226377;
 }
 
+.employ-str--title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #fff;
+}
+
 .header-str {
 	padding: 0 15px;
 	-js-display: flex;
@@ -387,10 +394,14 @@ p{
 
 .infoadmin-str--employs {
 	overflow-y: auto;
+	height: 427px;
+	padding-top: 38px;
 }
 
 .infoadmin-str--contacts {
 	overflow-y: auto;
+	height: 427px;
+	padding-top: 38px;
 }
 
 .infoadmin-str--adduser {
@@ -437,6 +448,98 @@ p{
 	-js-display: flex;
 	display: flex;
 	justify-content: space-between;
+}
+
+.employ-str {
+	width: 717px;
+	box-sizing: border-box;
+	margin-top: 15px;
+}
+
+.employ-str--title {
+	text-align: center;
+	padding: 10px 0;
+	background-color: #226377;
+}
+
+.employ-str--left {
+	flex-basis: 326px;
+	box-sizing: border-box;
+	border-right: 1px solid #dcdcdc;
+	overflow-y: auto;
+	padding-right: 22px;
+	height: 300px;
+}
+
+.employ-str--right {
+	flex-basis: 391px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	height: 300px;
+	padding-left: 10px;
+}
+
+.employ-str--minus {
+	background-image: url(../img/minus.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin-left: auto;
+}
+
+.employ-str--list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.employ-str--item {
+	display: block;
+	position: relative;
+	margin-bottom: 14px;
+}
+
+.employ-str--item:last-of-type {
+	margin-bottom: 0;
+}
+
+.employ-str--img {
+	width: 34px;
+	height: 34px;
+	display: block;
+	margin-right: 12px;
+}
+
+.employ-str--block {
+	-js-display: flex;
+	display: flex;
+	align-items: center;
+}
+
+.employ-str--plusgr {
+	background-image: url(../img/plus-green.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin-left: auto;
+}
+
+.employ-str--footer {
+	border-top: 1px solid #dcdcdc;
+	-js-display: flex;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.employ-str--search {
+	margin-right: auto;
+}
+
+.employ-str--mr {
+	margin-right: 30px;
+	height: 30px;
 }
 
 .infouser-str--bt {

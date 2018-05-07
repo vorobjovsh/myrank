@@ -7,3 +7,4 @@
 //= scripts/components/pensadmin.js
 //= scripts/components/infouser.js
 //= scripts/components/infoadmin.js
+//= scripts/components/employ.js
