@@ -321,6 +321,27 @@ p{
 	color: #fff;
 }
 
+.addcontacts-str--tel {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #226377;
+}
+
+.addcontacts-str--itemleft::before {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #333;
+}
+
+.addcontacts-str--email {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #226377;
+}
+
 .header-str {
 	padding: 0 15px;
 	-js-display: flex;
@@ -390,6 +411,115 @@ p{
 
 .subdivision-str__content--admin {
 	overflow-x: auto;
+}
+
+.addcontacts-str {
+	width: 717px;
+	box-sizing: border-box;
+	margin-top: 15px;
+}
+
+.addcontacts-str--left {
+	flex-basis: 330px;
+	height: 300px;
+	overflow-y: auto;
+	border-right: 1px solid #dcdcdc;
+}
+
+.addcontacts-str--right {
+	flex-basis: 387px;
+	height: 300px;
+	overflow-y: auto;
+	padding-left: 30px;
+}
+
+.addcontacts-str--bb {
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 15px;
+	margin-bottom: 20px !important;
+}
+
+.addcontacts-str--tel {
+	margin-bottom: 0;
+}
+
+.addcontacts-str--listleft {
+	list-style-type: decimal;
+	padding-left: 30px;
+	counter-reset: item;
+	margin-bottom: 33px;
+}
+
+.addcontacts-str--itemleft {
+	display: block;
+	position: relative;
+	margin-bottom: 14px;
+}
+
+.addcontacts-str--itemleft:last-of-type {
+	margin-bottom: 0;
+}
+
+.addcontacts-str--itemleft::before {
+	content: counter(item) ". ";
+	counter-increment: item;
+	position: absolute;
+	top: 0;
+	left: -28px;
+}
+
+.addcontacts-str--edittel {
+	width: 100%;
+}
+
+.addcontacts-str--form {
+	-js-display: flex;
+	display: flex;
+	margin-bottom: 22px;
+}
+
+.addcontacts-str--input {
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #dcdcdc;
+	width: 250px;
+}
+
+.addcontacts-str--ok {
+	margin-left: 5px;
+	background-color: #ff7200;
+	color: #fff;
+	border-radius: 0;
+	border: none;
+}
+
+.addcontacts-str--ok:hover {
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+}
+
+.addcontacts-str--addbtn {
+	margin-bottom: 32px;
+}
+
+.addcontacts-str--email {
+	margin-bottom: 0;
+}
+
+.addcontacts-str--editright {
+	-js-display: flex;
+	display: flex;
+	margin-left: 20px;
+}
+
+.addcontacts-str--editemail {
+	-js-display: flex;
+	display: flex;
+	align-items: center;
+}
+
+.addcontacts-str--mt {
+	margin-top: 28px;
 }
 
 .infoadmin-str--employs {

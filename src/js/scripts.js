@@ -8,3 +8,4 @@
 //= scripts/components/infouser.js
 //= scripts/components/infoadmin.js
 //= scripts/components/employ.js
+//= scripts/components/addcontact.js

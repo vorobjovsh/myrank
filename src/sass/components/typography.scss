@@ -210,3 +210,34 @@
   }
 
 }
+
+.addcontacts-str {
+
+  &--tel {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #226377;
+  }
+
+  &--itemleft {
+
+    &::before {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      color: #333;
+    }
+
+  }
+
+  &--email {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #226377;
+  }
+
+}
+
+
