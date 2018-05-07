@@ -385,6 +385,60 @@ p{
 	overflow-x: auto;
 }
 
+.infoadmin-str--employs {
+	overflow-y: auto;
+}
+
+.infoadmin-str--contacts {
+	overflow-y: auto;
+}
+
+.infoadmin-str--adduser {
+	display: block;
+	padding: 10px 10px 12px 40px;
+	cursor: pointer;
+	border: 1px solid #f95200;
+	background-image: url(../img/plus.jpg);
+	background-repeat: no-repeat;
+	background-position: 8px center;
+	border: 1px solid #f95200;
+	margin: auto;
+}
+
+.infoadmin-str--adress {
+	margin-bottom: 30px;
+}
+
+.infoadmin-str--edit {
+	margin-left: auto;
+	-js-display: flex;
+	display: flex;
+	align-items: center;
+}
+
+.infoadmin-str--pens {
+	background-image: url(../img/pens.png);
+	background-repeat: no-repeat;
+	display: block;
+	width: 25px;
+	height: 23px;
+	margin-top: 2px;
+}
+
+.infoadmin-str--trash {
+	background-image: url(../img/trash-mini.png);
+	background-repeat: no-repeat;
+	display: block;
+	width: 25px;
+	height: 23px;
+}
+
+.infoadmin-str--editcontact {
+	-js-display: flex;
+	display: flex;
+	justify-content: space-between;
+}
+
 .infouser-str--bt {
 	border-top: 2px solid #f95200;
 	width: 718px;
@@ -415,6 +469,7 @@ p{
 	list-style-type: decimal;
 	padding-left: 30px;
 	counter-reset: item;
+	margin-bottom: 33px;
 }
 
 .infouser-str__employs-item {
