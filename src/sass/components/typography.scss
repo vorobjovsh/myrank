@@ -143,3 +143,59 @@
     color: #333;
 }
 
+.infouser-str {
+
+  &--title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: #333;
+  }
+
+}
+
+.infouser-str__title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+}
+
+.infouser-str__employs-item {
+
+  &::before {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+  }
+
+}
+
+.infouser-str__link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #226377;
+}
+
+.infouser-str__vacancy {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #333;
+}
+
+.infouser-str__subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #333;
+}
+
+.infouser-str__tel {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #226377;
+}

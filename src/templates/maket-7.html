@@ -15,7 +15,7 @@
               </div>
               <div class="subdivision-str__content subdivision-str__content--admin">
 
-                  <ul class="uservisible-str">
+                  <ul class="uservisible-str adminvisible-str">
                       <li class="uservisible-str__item uservisible-str__item--mark-right">
                           <a href="/" class="uservisible-str__link">Руководство компании</a>
                           <a href="/" class="uservisible-str__item--trash"></a>
@@ -166,5 +166,47 @@
             <a href="/" class="footer-str__searchlink">Найти сотрудников</a>
         </div>
    </div>
+
+   <div id="myModal-trash-7" class="modal fade">
+      <div class="modal-dialog wrapper-str--bt">
+          <div class="modal-content">
+              <div class="modal-header wrapper-str--flcenter">
+                  <h4 class="modal-title">
+                      Действительно ли вы хотите удалить часть структуры? Вместе с ней будут удалены и все ее отделы.
+                  </h4>
+              </div>
+              <div class="modal-body">
+
+                 <button type="submit" class="wrapper-str--addbtn subdivision-str--user">Удалить</button>
+
+              </div>
+              <div class="modal-footer wrapper-str--mf">
+                  <button class="wrapper-str--ex" type="button" data-dismiss="modal">Отмена</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div id="myModal-pens-7" class="modal fade">
+      <div class="modal-dialog wrapper-str--bt">
+          <div class="modal-content">
+              <div class="modal-header wrapper-str--flcenter">
+                  <h4 class="modal-title">
+                      Изменить название
+                  </h4>
+              </div>
+              <div class="modal-body">
+                 <div class="wrapper-str--label">Введите название отдела:</div>
+                 <form action="" class="wrapper-str--form">
+                   <input type="text" class="wrapper-str--input">
+                   <button type="submit" class="wrapper-str--addbtn subdivision-str--addbtn">Сохранить</button>
+                 </form>
+              </div>
+              <div class="modal-footer wrapper-str--mf">
+                  <button class="wrapper-str--ex" type="button" data-dismiss="modal">Отмена</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
 </div>

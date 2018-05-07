@@ -1,0 +1,110 @@
+.infouser-str {
+
+  &--bt {
+    border-top: 2px solid #f95200;
+    width: 718px;
+    margin-top: 10%;
+  }
+
+  &--title {
+
+  }
+
+  &--close {
+    text-align: right;
+  }
+
+}
+
+.infouser-str__block {
+  @include flex-between;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.infouser-str__employs {
+  flex-basis: 426px;
+  box-sizing: border-box;
+  border-right: 1px solid #dcdcdc;
+  padding-top: 15px;
+}
+
+.infouser-str__title {
+
+}
+
+.infouser-str__employs-list {
+  list-style-type: decimal;
+  padding-left: 30px;
+  counter-reset: item;
+}
+
+.infouser-str__employs-item {
+  display: block;
+  position: relative;
+  margin-bottom: 14px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  position: absolute;
+  top: 10px;
+  left: -28px;
+  }
+
+}
+
+.infouser-str_item-block {
+  -js-display: flex;
+    display: flex;
+}
+
+.infouser-str__img {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin-right: 18px;
+}
+
+.infouser-str__fio {
+
+}
+
+.infouser-str__link {
+
+}
+
+.infouser-str__vacancy {
+
+}
+
+.infouser-str__contacts {
+  flex-basis: 292px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 40px;
+}
+
+.infouser-str__subtitle {
+
+}
+
+.infouser-str__tel {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.infouser-str__email-block {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+

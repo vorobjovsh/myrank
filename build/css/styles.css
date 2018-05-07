@@ -265,6 +265,55 @@ p{
 	color: #333;
 }
 
+.infouser-str--title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+	color: #333;
+}
+
+.infouser-str__title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #333;
+}
+
+.infouser-str__employs-item::before {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #333;
+}
+
+.infouser-str__link {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #226377;
+}
+
+.infouser-str__vacancy {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: #333;
+}
+
+.infouser-str__subtitle {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: #333;
+}
+
+.infouser-str__tel {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #226377;
+}
+
 .header-str {
 	padding: 0 15px;
 	-js-display: flex;
@@ -336,6 +385,89 @@ p{
 	overflow-x: auto;
 }
 
+.infouser-str--bt {
+	border-top: 2px solid #f95200;
+	width: 718px;
+	margin-top: 10%;
+}
+
+.infouser-str--close {
+	text-align: right;
+}
+
+.infouser-str__block {
+	-js-display: flex;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.infouser-str__employs {
+	flex-basis: 426px;
+	box-sizing: border-box;
+	border-right: 1px solid #dcdcdc;
+	padding-top: 15px;
+}
+
+.infouser-str__employs-list {
+	list-style-type: decimal;
+	padding-left: 30px;
+	counter-reset: item;
+}
+
+.infouser-str__employs-item {
+	display: block;
+	position: relative;
+	margin-bottom: 14px;
+}
+
+.infouser-str__employs-item:last-of-type {
+	margin-bottom: 0;
+}
+
+.infouser-str__employs-item::before {
+	content: counter(item) ". ";
+	counter-increment: item;
+	position: absolute;
+	top: 10px;
+	left: -28px;
+}
+
+.infouser-str_item-block {
+	-js-display: flex;
+	display: flex;
+}
+
+.infouser-str__img {
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin-right: 18px;
+}
+
+.infouser-str__contacts {
+	flex-basis: 292px;
+	box-sizing: border-box;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-bottom: 40px;
+}
+
+.infouser-str__tel {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+.infouser-str__email-block {
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px 0;
+}
+
 .uservisible-str {
 	list-style: none;
 	padding-left: 0;
@@ -402,6 +534,7 @@ p{
 	display: block;
 	width: 25px;
 	height: 23px;
+	z-index: 5;
 }
 
 .uservisible-str__item--pens {
