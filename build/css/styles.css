@@ -765,36 +765,37 @@ p{
 .uservisible-str > .uservisible-str__item::before {
 	content: '';
 	position: absolute;
-	top: 22px;
-	left: -10px;
-	width: 10px;
+	top: 24px;
+	left: -12px;
+	width: 12px;
 	height: 1px;
 	background: #f95200;
 }
 
 .uservisible-str__item {
-	width: 230px;
+	width: 252px;
 	position: relative;
+	box-shadow: 0.5px 0.9px 3px #cfe0db;
+	margin-bottom: 10px;
+	border-left: 2px solid #f95200;
 }
 
 .uservisible-str__item--mark {
 	background-image: url(../img/arrow-bottom.png);
 	background-repeat: no-repeat;
-	background-position: 202px center;
+	background-position: 219px 22px;
 }
 
 .uservisible-str__item--mark-right {
 	background-image: url(../img/arrow-sub.png);
 	background-repeat: no-repeat;
-	background-position: 208px center;
+	background-position: 227px 16px;
 }
 
 .uservisible-str__item--addmain {
 	background-image: url(../img/plus.jpg);
 	background-repeat: no-repeat;
 	background-position: 8px center;
-	border: 1px solid #f95200;
-	width: 230px;
 	position: relative;
 }
 
@@ -802,14 +803,10 @@ p{
 	content: '';
 	position: absolute;
 	top: 22px;
-	left: -11px;
-	width: 10px;
+	left: -13px;
+	width: 13px;
 	height: 1px;
 	background: #f95200;
-}
-
-.uservisible-str__item:last-of-type {
-	margin-bottom: 0;
 }
 
 .uservisible-str__item--trash {
@@ -817,8 +814,8 @@ p{
 	background-image: url(../img/trash-admin.jpg);
 	background-repeat: no-repeat;
 	background-position: 5px center;
-	top: -6px;
-	left: 214px;
+	top: -4px;
+	right: -12px;
 	display: block;
 	width: 25px;
 	height: 23px;
@@ -826,24 +823,24 @@ p{
 }
 
 .uservisible-str__item--pens {
-	position: absolute;
 	background-image: url(../img/pens.png);
 	background-repeat: no-repeat;
-	background-position: 5px center;
-	top: 15px;
-	left: 183px;
 	display: block;
-	width: 23px;
+	width: 15px;
 	height: 14px;
+}
+
+.uservisible-str__link-block {
+	-js-display: flex;
+	display: flex;
+	align-items: center;
+	padding: 12px 38px 15px 10px;
 }
 
 .uservisible-str__link {
 	display: block;
-	box-shadow: 0.5px 0.9px 3px #cfe0db;
-	padding: 12px 40px 12px 10px;
-	margin-bottom: 10px;
-	border-left: 2px solid #f95200;
 	cursor: pointer;
+	margin-right: 10px;
 }
 
 .uservisible-str__link:hover {
@@ -854,80 +851,77 @@ p{
 	position: absolute;
 	list-style: none;
 	padding-left: 0;
-	top: 0;
-	left: 250px;
+	top: 3px;
+	left: 283px;
 }
 
 .uservisible-str__sublist::before {
 	content: '';
 	position: absolute;
-	top: 22px;
-	left: -10px;
+	top: 25px;
+	left: -12px;
 	width: 1px;
-	height: calc(100% - 55px);
+	height: calc(100% - 48px);
 	background: #f00;
 }
 
 .uservisible-str__subitem {
-	width: 230px;
+	width: 252px;
 	position: relative;
-}
-
-.uservisible-str__sublink {
-	display: block;
-	box-shadow: 0.5px 0.9px 3px #cfe0db;
-	padding: 12px 40px 12px 10px;
-	margin-bottom: 10px;
-	cursor: pointer;
+	margin-bottom: 6px;
 	border: 1px solid #cfe0db;
+	box-shadow: 0.5px 0.9px 3px #cfe0db;
 	position: relative;
 }
 
-.uservisible-str__sublink:hover {
-	text-decoration: none;
+.uservisible-str__subitem:hover {
 	border: 1px solid #f95200;
 	box-sizing: border-box;
 }
 
-.uservisible-str__sublink--number {
-	position: absolute;
-	top: 12px;
-	left: 112px;
+.uservisible-str__sublink-block {
+	-js-display: flex;
+	display: flex;
+	align-items: center;
+	padding: 12px 38px 15px 10px;
+}
+
+.uservisible-str__sublink {
 	display: block;
 	cursor: pointer;
+	margin-right: 10px;
+}
+
+.uservisible-str__sublink:hover {
+	text-decoration: none;
+}
+
+.uservisible-str__sublink--number {
+	display: block;
+	cursor: pointer;
+	margin-left: 14px;
+	margin-right: 10px;
 }
 
 .uservisible-str__sublink--man {
-	position: absolute;
 	background-image: url(../img/man-mini.png);
 	background-repeat: no-repeat;
-	background-position: 5px center;
-	top: 15px;
-	left: 130px;
 	display: block;
 	width: 22px;
 	height: 14px;
 }
 
 .uservisible-str__sublink--call {
-	position: absolute;
 	background-image: url(../img/call-mini.png);
 	background-repeat: no-repeat;
-	background-position: 5px center;
-	top: 15px;
-	left: 150px;
 	display: block;
 	width: 22px;
 	height: 14px;
 }
 
 .uservisible-str__sublink--gps {
-	position: absolute;
 	background-image: url(../img/gps-mini.png);
 	background-repeat: no-repeat;
-	background-position: 5px center;
-	top: 15px;
-	left: 169px;
 	display: block;
 	width: 22px;
 	height: 16px;
@@ -948,9 +942,9 @@ p{
 .uservisible-str__sublist > .uservisible-str__subitem:nth-child(1)::before {
 	content: '';
 	position: absolute;
-	top: 22px;
-	left: -20px;
-	width: 10px;
+	top: 24px;
+	left: -33px;
+	width: 20px;
 	height: 1px;
 	background: #f95200;
 }
@@ -958,16 +952,16 @@ p{
 .uservisible-str__sublist > .uservisible-str__subitem::after {
 	content: '';
 	position: absolute;
-	top: 22px;
-	left: -10px;
-	width: 10px;
+	top: 24px;
+	left: -12px;
+	width: 12px;
 	height: 1px;
 	background: #f95200;
 }
 
 .uservisible-str__link--addmain {
-	display: block;
-	padding: 10px 10px 12px 40px;
+	display: inline-block;
+	padding: 14px 10px 13px 38px;
 	cursor: pointer;
 	border: 1px solid #f95200;
 	position: relative;
@@ -975,6 +969,28 @@ p{
 
 .uservisible-str__link--addmain:hover {
 	text-decoration: none;
+}
+
+.uservisible-str__depart {
+	position: absolute;
+	list-style: none;
+	padding-left: 0;
+	top: 3px;
+	left: 283px;
+}
+
+.uservisible-str__depart a {
+	width: 155px;
+}
+
+.uservisible-str__depart::before {
+	content: '';
+	position: absolute;
+	top: 23px;
+	left: -33px;
+	width: 21px;
+	height: 1px;
+	background: #f95200;
 }
 
 .footer-str {
