@@ -1,7 +1,7 @@
 .infouser-str {
 
   &--bt {
-    border-top: 2px solid #f95200;
+    border-top: 8px solid #f95200;
     width: 718px;
 //    margin-top: 10%;
   }
@@ -12,6 +12,11 @@
 
   &--close {
     text-align: right;
+    opacity: 1 !important;
+  }
+
+  &--btnone {
+    border-top: none !important;
   }
 
 }
@@ -28,6 +33,8 @@
   box-sizing: border-box;
   border-right: 1px solid #dcdcdc;
   padding-top: 15px;
+  overflow-y: auto;
+  height: 347px;
 }
 
 .infouser-str__title {
@@ -90,6 +97,8 @@
   padding-top: 15px;
   padding-left: 15px;
   padding-bottom: 40px;
+  overflow-y: auto;
+  height: 347px;
 }
 
 .infouser-str__subtitle {
