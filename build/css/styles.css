@@ -124,6 +124,10 @@ p{
 	display: block;
 }
 
+.modal {
+	background-color: rgba(219, 219, 219, 0.6) !important;
+}
+
 /*body {
     font-family: 'PT Sans', sans-serif;
     font-size: rem(14px);
