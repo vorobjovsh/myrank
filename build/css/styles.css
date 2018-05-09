@@ -428,6 +428,7 @@ p{
 	height: 300px;
 	overflow-y: auto;
 	border-right: 1px solid #dcdcdc;
+	margin-bottom: 38px;
 }
 
 .addcontacts-str--right {
@@ -435,6 +436,7 @@ p{
 	height: 300px;
 	overflow-y: auto;
 	padding-left: 30px;
+	margin-bottom: 38px;
 }
 
 .addcontacts-str--bb {
@@ -611,6 +613,7 @@ p{
 	overflow-y: auto;
 	height: 300px;
 	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .employ-str--minus {
@@ -620,6 +623,7 @@ p{
 	width: 22px;
 	height: 22px;
 	margin-left: auto;
+	padding-right: 22px;
 }
 
 .employ-str--list {
@@ -706,6 +710,7 @@ p{
 	padding-top: 15px;
 	overflow-y: auto;
 	height: 347px;
+	margin-bottom: 38px;
 }
 
 .infouser-str__employs-list {
@@ -745,6 +750,10 @@ p{
 	margin-right: 18px;
 }
 
+.infouser-str__fio {
+	width: 215px;
+}
+
 .infouser-str__contacts {
 	flex-basis: 292px;
 	box-sizing: border-box;
@@ -753,6 +762,7 @@ p{
 	padding-bottom: 40px;
 	overflow-y: auto;
 	height: 347px;
+	margin-bottom: 38px;
 }
 
 .infouser-str__tel {
