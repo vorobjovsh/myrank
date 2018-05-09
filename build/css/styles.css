@@ -181,7 +181,7 @@ p{
 	color: #226377;
 }
 
-.footer-str_btn {
+.footer-str__btn {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
@@ -675,7 +675,6 @@ p{
 .infouser-str--bt {
 	border-top: 2px solid #f95200;
 	width: 718px;
-	margin-top: 10%;
 }
 
 .infouser-str--close {
@@ -1067,17 +1066,26 @@ p{
 	display: block;
 }
 
-.footer-str_btn {
-	padding: 8px 13px;
+.footer-str__itemright {
+	-js-display: flex;
+	display: flex;
+	height: 39px;
+}
+
+.footer-str__btn {
+	display: block;
+	padding: 0 13px;
 	background-color: #57955d;
+	border-radius: none !important;
 }
 
 .footer-str__trash {
-	margin-left: -4px;
-	padding: 8px 7px 11px;
+	display: block;
+	padding: 0 11px 0 12px;
 	border-top: 1px solid #dcdcdc;
 	border-right: 1px solid #dcdcdc;
 	border-bottom: 1px solid #dcdcdc;
+	border-radius: none !important;
 }
 
 .footer-str__applicatnew {
