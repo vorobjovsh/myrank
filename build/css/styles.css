@@ -528,6 +528,14 @@ p{
 	margin-top: 28px;
 }
 
+.addcontacts-str--footer {
+	border-top: 1px solid #dcdcdc;
+	-js-display: flex;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 .infoadmin-str--employs {
 	overflow-y: auto;
 	height: 427px;

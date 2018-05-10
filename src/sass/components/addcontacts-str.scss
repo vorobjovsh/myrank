@@ -112,4 +112,12 @@
     margin-top: 28px;
   }
 
+  &--footer {
+    border-top: 1px solid #dcdcdc;
+    -js-display: flex;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
 }
