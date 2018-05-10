@@ -692,6 +692,8 @@ p{
 
 .infouser-str--btnone {
 	border-top: none !important;
+	border-left: none !important;
+	border-right: none !important;
 }
 
 .infouser-str__block {
