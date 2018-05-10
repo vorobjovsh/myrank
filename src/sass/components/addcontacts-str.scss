@@ -6,7 +6,7 @@
 
   &--left {
     flex-basis: 330px;
-    height: 300px;
+    height: 315px;
     overflow-y: auto;
     border-right: 1px solid #dcdcdc;
     margin-bottom: 38px;
@@ -14,7 +14,7 @@
 
   &--right {
     flex-basis: 387px;
-    height: 300px;
+    height: 315px;
     overflow-y: auto;
     padding-left: 30px;
     margin-bottom: 38px;
@@ -41,7 +41,7 @@
 
   display: block;
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 5px;
 
   &:last-of-type {
     margin-bottom: 0;
