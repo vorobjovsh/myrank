@@ -667,7 +667,7 @@ p{
 	border-top: 1px solid #dcdcdc;
 	-js-display: flex;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 }
 
