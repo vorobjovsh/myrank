@@ -2,6 +2,20 @@
   list-style: none;
   padding-left: 0;
   position: relative;
+
+  &--topflex {
+    -js-display: flex;
+    display: flex;
+    align-items: center;
+  }
+
+  &--bottomflex {
+    -js-display: flex;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+  }
+
 }
 
 .uservisible-str > .uservisible-str__item::before {
@@ -34,13 +48,13 @@
   &--mark {
     background-image: url(../img/arrow-bottom.png);
     background-repeat: no-repeat;
-    background-position: 219px 22px;
+    background-position: 219px center;
   }
 
   &--mark-right {
     background-image: url(../img/arrow-sub.png);
     background-repeat: no-repeat;
-    background-position: 227px 16px;
+    background-position: 227px center;
   }
 
   &--addmain {
@@ -85,10 +99,10 @@
 }
 
 .uservisible-str__link-block {
-  -js-display: flex;
+   -js-display: flex;
     display: flex;
-  align-items: center;
-  padding: 12px 38px 15px 10px;
+  flex-direction: column;
+  padding: 12px 36px 12px 10px;
 }
 
 .uservisible-str__link {
@@ -141,8 +155,8 @@
 .uservisible-str__sublink-block {
    -js-display: flex;
     display: flex;
-  align-items: center;
-  padding: 12px 38px 15px 10px;
+  flex-direction: column;
+  padding: 12px 36px 12px 10px;
 }
 
 .uservisible-str__sublink {
@@ -156,7 +170,6 @@
 
   &--number {
     display: block;
-    margin-left: 14px;
     margin-right: 2px;
   }
 
