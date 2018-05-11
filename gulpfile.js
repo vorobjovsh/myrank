@@ -135,10 +135,24 @@ gulp.task("js", () =>
         dirname: "",
         basename: "bundle",
         prefix: "",
-        suffix: ".min",
+        suffix: "",
         extname: ".js"
     }))
     .pipe(gulp.dest("./build/js"))
+);
+
+// Создаем таск для переноса js файлов в папку build/libs/js
+gulp.task("js-build-libs", () =>
+  gulp
+    .src("src/js/scripts/libs/*.js")
+    .pipe(gulp.dest("./build/js/libs"))
+);
+
+// Создаем таск для переноса js файлов в папку public/libs/js
+gulp.task("js-public-libs", () =>
+  gulp
+    .src("src/js/scripts/libs/*.js")
+    .pipe(gulp.dest("./public/js/libs"))
 );
 
 // Создаем таск для сборки js файлов (в продакшен)
@@ -289,6 +303,7 @@ gulp.task("build", function(done) {
     "fonts",
     "css",
     "html",
+    "js-build-libs",
     "js",
     done
   );
@@ -304,6 +319,7 @@ gulp.task("public", function(done) {
     "images-prod",
     "css-prod",
     "html-prod",
+    "js-public-libs",
     "js-prod",
     done
   );

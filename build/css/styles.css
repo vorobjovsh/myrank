@@ -264,7 +264,7 @@ p{
 .uservisible-str__sublink--number {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 13px;
 	color: #256579;
 }
 
@@ -959,33 +959,38 @@ p{
 .uservisible-str__sublink--number {
 	display: block;
 	margin-right: 2px;
-	padding-top: 2px;
 }
 
 .uservisible-str__sublink--man {
-	background-image: url(../img/man-mini.png);
-	background-repeat: no-repeat;
 	display: block;
-	width: 22px;
-	height: 14px;
-	margin-right: 5px;
+	margin-right: 7px;
 }
 
 .uservisible-str__sublink--call {
-	background-image: url(../img/call-mini.png);
-	background-repeat: no-repeat;
 	display: block;
-	width: 22px;
-	height: 14px;
-	margin-right: 5px;
+	margin-right: 7px;
 }
 
 .uservisible-str__sublink--gps {
-	background-image: url(../img/gps-mini.png);
-	background-repeat: no-repeat;
 	display: block;
-	width: 22px;
-	height: 16px;
+}
+
+.uservisible-str__sublink--imgman {
+	display: block;
+	width: 11px;
+	height: 11px;
+}
+
+.uservisible-str__sublink--imgcall {
+	display: block;
+	width: 11px;
+	height: 11px;
+}
+
+.uservisible-str__sublink--imggps {
+	display: block;
+	width: 8px;
+	height: 11px;
 }
 
 .uservisible-str__sublink--trash {

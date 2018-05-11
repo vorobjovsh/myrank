@@ -97,8 +97,8 @@ btnTrashArr.addEventListener("click", infoAdmin);
 function addEmploy(event) {
     event.preventDefault();
     var elem = event.target;
-    console.log(elem);
-    if (elem.classList.contains("uservisible-str__sublink--man")) {
+    //console.log(elem);
+    if (elem.classList.contains("uservisible-str__sublink--imgman")) {
         $("#myModal-employ-7").modal("show");
     }
 }
@@ -110,7 +110,7 @@ function addContact(event) {
     event.preventDefault();
     var elem = event.target;
     //console.log(elem);
-    if (elem.classList.contains("uservisible-str__sublink--call")) {
+    if (elem.classList.contains("uservisible-str__sublink--imgcall")) {
 
         $("#myModal-addcontact-7").modal("show");
     }

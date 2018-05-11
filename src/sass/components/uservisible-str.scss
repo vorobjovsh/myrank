@@ -171,33 +171,38 @@
   &--number {
     display: block;
     margin-right: 2px;
-    padding-top: 2px;
   }
 
   &--man {
-    background-image: url(../img/man-mini.png);
-    background-repeat: no-repeat;
     display: block;
-    width: 22px;
-    height: 14px;
-    margin-right: 5px;
+    margin-right: 7px;
   }
 
   &--call {
-    background-image: url(../img/call-mini.png);
-    background-repeat: no-repeat;
     display: block;
-    width: 22px;
-    height: 14px;
-    margin-right: 5px;
+    margin-right: 7px;
   }
 
   &--gps {
-    background-image: url(../img/gps-mini.png);
-    background-repeat: no-repeat;
     display: block;
-    width: 22px;
-    height: 16px;
+  }
+
+  &--imgman {
+    display: block;
+    width: 11px;
+    height: 11px;
+  }
+
+  &--imgcall {
+    display: block;
+    width: 11px;
+    height: 11px;
+  }
+
+  &--imggps {
+    display: block;
+    width: 8px;
+    height: 11px;
   }
 
   &--trash {
