@@ -1,3 +1,4 @@
+// Скрипт, запускающий модальное окно - Редактирование
 function editPens(event) {
     event.preventDefault();
     let elem = event.target;

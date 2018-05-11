@@ -1,5 +1,4 @@
-//const btnTrashArr = document.querySelector(".adminvisible-str");
-
+// Скрипт, запускающий модальное окно - Добавление сотрудников в отдел
 function addEmploy(event) {
     event.preventDefault();
     let elem = event.target;

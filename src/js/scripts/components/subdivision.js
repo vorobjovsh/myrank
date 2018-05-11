@@ -1,3 +1,4 @@
+// Скрипт выбора панелей User или Admin
 const maket7 = document.querySelector(".maket-7");
 const maket8 = document.querySelector(".maket-8");
 const addSubdivision = document.querySelector(".subdivision-str--addbtn");
@@ -14,8 +15,6 @@ function addSubdiv(evt) {
   evt.preventDefault();
   $("#myModal-2").modal("hide");
   $("#myModal-option-2").modal("show");
-  //maket2.classList.remove("js-block");
-  //maket8.classList.add("js-block");
 }
 
 addSubdivision.addEventListener("click", addSubdiv);
@@ -34,5 +33,7 @@ function addToAdmin(evt) {
   maket7.classList.add("js-block");
 }
 
+// Переходим в панель User
 addUser.addEventListener("click", addToUser);
+// Переходим в панель Admin
 addAdmin.addEventListener("click", addToAdmin);

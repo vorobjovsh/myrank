@@ -1,3 +1,4 @@
+// Скрипт, запускающий модальное окно - Открытый раздел - другие пользователи
 const userItem = document.querySelector(".js-uservisible-str");
 
 function infoUser(event) {

@@ -1,3 +1,4 @@
+// Скрипт, запускающий модальное окно - Удаление в корзину
 const btnTrashArr = document.querySelector(".adminvisible-str");
 
 function toAdminTrash(event) {

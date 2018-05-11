@@ -1,4 +1,4 @@
-//const btnTrashArr = document.querySelector(".adminvisible-str");
+// Скрипт, запускающий модальное окно - Открытый раздел - админ
 function infoAdmin(event) {
     event.preventDefault();
     let elem = event.target;

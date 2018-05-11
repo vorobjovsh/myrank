@@ -1,5 +1,4 @@
-//const btnTrashArr = document.querySelector(".adminvisible-str");
-
+// Скрипт, запускающий модальное окно - Добавление контактов в отдел
 function addContact(event) {
     event.preventDefault();
     let elem = event.target;

@@ -1,5 +1,6 @@
 "use strict";
 
+//Скрипт, запускающий модальное окно - Создание подразделения
 var maket1 = document.querySelector(".maket-1");
 var maket2 = document.querySelector(".maket-2");
 var createStr = document.querySelector(".button-maket-1");
@@ -8,10 +9,12 @@ function addCompany(evt) {
     evt.preventDefault();
     maket1.classList.add("js-none");
     maket2.classList.add("js-block");
+    //запускаем тестовое модальное окно (с выбором панелей User и Admin)
     subdivision();
 }
 
 createStr.addEventListener("click", addCompany);
+// Скрипт выбора панелей User или Admin
 var maket7 = document.querySelector(".maket-7");
 var maket8 = document.querySelector(".maket-8");
 var addSubdivision = document.querySelector(".subdivision-str--addbtn");
@@ -27,8 +30,6 @@ function addSubdiv(evt) {
     evt.preventDefault();
     $("#myModal-2").modal("hide");
     $("#myModal-option-2").modal("show");
-    //maket2.classList.remove("js-block");
-    //maket8.classList.add("js-block");
 }
 
 addSubdivision.addEventListener("click", addSubdiv);
@@ -47,8 +48,11 @@ function addToAdmin(evt) {
     maket7.classList.add("js-block");
 }
 
+// Переходим в панель User
 addUser.addEventListener("click", addToUser);
+// Переходим в панель Admin
 addAdmin.addEventListener("click", addToAdmin);
+// Скрипт, запускающий модальное окно - Удаление в корзину
 var btnTrashArr = document.querySelector(".adminvisible-str");
 
 function toAdminTrash(event) {
@@ -61,6 +65,7 @@ function toAdminTrash(event) {
 }
 
 btnTrashArr.addEventListener("click", toAdminTrash);
+// Скрипт, запускающий модальное окно - Редактирование
 function editPens(event) {
     event.preventDefault();
     var elem = event.target;
@@ -71,6 +76,7 @@ function editPens(event) {
 }
 
 btnTrashArr.addEventListener("click", editPens);
+// Скрипт, запускающий модальное окно - Открытый раздел - другие пользователи
 var userItem = document.querySelector(".js-uservisible-str");
 
 function infoUser(event) {
@@ -82,7 +88,7 @@ function infoUser(event) {
 }
 
 userItem.addEventListener("click", infoUser);
-//const btnTrashArr = document.querySelector(".adminvisible-str");
+// Скрипт, запускающий модальное окно - Открытый раздел - админ
 function infoAdmin(event) {
     event.preventDefault();
     var elem = event.target;
@@ -92,8 +98,7 @@ function infoAdmin(event) {
 }
 
 btnTrashArr.addEventListener("click", infoAdmin);
-//const btnTrashArr = document.querySelector(".adminvisible-str");
-
+// Скрипт, запускающий модальное окно - Добавление сотрудников в отдел
 function addEmploy(event) {
     event.preventDefault();
     var elem = event.target;
@@ -104,8 +109,7 @@ function addEmploy(event) {
 }
 
 btnTrashArr.addEventListener("click", addEmploy);
-//const btnTrashArr = document.querySelector(".adminvisible-str");
-
+// Скрипт, запускающий модальное окно - Добавление контактов в отдел
 function addContact(event) {
     event.preventDefault();
     var elem = event.target;
