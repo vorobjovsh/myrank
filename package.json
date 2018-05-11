@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gulp start",
     "build": "gulp build",
+    "public": "gulp public",
     "svg-sprite": "gulp svg-sprite",
     "images": "gulp webp && gulp img"
   },
