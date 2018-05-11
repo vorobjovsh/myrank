@@ -20,6 +20,15 @@
   box-shadow: 0.5px 0.9px 3px #cfe0db;
   margin-bottom: 10px;
   border-left: 2px solid #f95200;
+  border-top: 1px solid #cfe0db;
+  border-right: 1px solid #cfe0db;
+  border-bottom: 1px solid #cfe0db;
+
+  &:hover {
+    border-top: 1px solid #f95200;
+    border-right: 1px solid #f95200;
+    border-bottom: 1px solid #f95200;
+  }
 
 
   &--mark {
