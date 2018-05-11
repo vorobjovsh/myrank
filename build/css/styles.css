@@ -959,6 +959,7 @@ p{
 .uservisible-str__sublink--number {
 	display: block;
 	margin-right: 2px;
+	padding-top: 2px;
 }
 
 .uservisible-str__sublink--man {
