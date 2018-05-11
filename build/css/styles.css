@@ -116,6 +116,12 @@ p{
 	background-color: #fff;
 }
 
+.wrapper-str--del {
+	-js-display: flex;
+	display: flex;
+	justify-content: center;
+}
+
 .js-none {
 	display: none;
 }
