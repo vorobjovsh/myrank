@@ -937,7 +937,7 @@ p{
 .uservisible-str__sublink--number {
 	display: block;
 	margin-left: 14px;
-	margin-right: 10px;
+	margin-right: 2px;
 }
 
 .uservisible-str__sublink--man {
@@ -946,6 +946,7 @@ p{
 	display: block;
 	width: 22px;
 	height: 14px;
+	margin-right: 5px;
 }
 
 .uservisible-str__sublink--call {
