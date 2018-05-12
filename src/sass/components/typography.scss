@@ -47,11 +47,16 @@
   color: #226377;
 }
 
-.footer-str__name {
+.footer-str__linkname {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #226377;
+
+  &:hover {
+    color: #226377;
+  }
+
 }
 
 .footer-str__btn {
