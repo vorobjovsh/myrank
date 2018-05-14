@@ -708,6 +708,10 @@ p{
 	height: 30px;
 }
 
+.employ-str--subtitle {
+	display: none;
+}
+
 .infouser-str--bt {
 	border-top: 8px solid #f95200;
 	width: 718px;
@@ -1345,6 +1349,131 @@ p{
 	text-align: center;
 }
 
+.addcontacts-str {
+	width: 717px;
+	box-sizing: border-box;
+	margin-top: 15px;
+}
+
+.addcontacts-str--left {
+	width: 260px;
+	height: auto;
+	overflow-y: visible;
+	border-right: none;
+	margin-bottom: 38px;
+}
+
+.addcontacts-str--right {
+	width: 260px;
+	height: auto;
+	overflow-y: visible;
+	padding-left: 30px;
+	margin-bottom: 38px;
+}
+
+.addcontacts-str--bb {
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 15px;
+	margin-bottom: 20px !important;
+}
+
+.addcontacts-str--tel {
+	margin-bottom: 0;
+}
+
+.addcontacts-str--listleft {
+	list-style-type: decimal;
+	padding-left: 20px;
+	counter-reset: item;
+	margin-bottom: 33px;
+}
+
+.addcontacts-str--itemleft {
+	display: block;
+	position: relative;
+	margin-bottom: 5px;
+}
+
+.addcontacts-str--itemleft:last-of-type {
+	margin-bottom: 0;
+}
+
+.addcontacts-str--itemleft::before {
+	content: counter(item) ". ";
+	counter-increment: item;
+	position: absolute;
+	top: 33%;
+	left: -28px;
+}
+
+.addcontacts-str--edittel {
+	width: 100%;
+}
+
+.addcontacts-str--form {
+	-js-display: flex;
+	display: flex;
+	margin-bottom: 22px;
+}
+
+.addcontacts-str--input {
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #dcdcdc;
+	width: 250px;
+}
+
+.addcontacts-str--ok {
+	margin-left: 5px;
+	background-color: #ff7200;
+	color: #fff;
+	border-radius: 0;
+	border: none;
+}
+
+.addcontacts-str--ok:hover {
+	background-color: #fff;
+	border: 1px solid #dcdcdc;
+}
+
+.addcontacts-str--addbtn {
+	margin-bottom: 32px;
+}
+
+.addcontacts-str--email {
+	margin-bottom: 0;
+}
+
+.addcontacts-str--editright {
+	-js-display: flex;
+	display: flex;
+	margin-left: 20px;
+}
+
+.addcontacts-str--editemail {
+	-js-display: flex;
+	display: flex;
+	align-items: center;
+}
+
+.addcontacts-str--mt {
+	margin-top: 28px;
+}
+
+.addcontacts-str--footer {
+	border-top: 1px solid #dcdcdc;
+	-js-display: flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 28px;
+}
+
+.addcontacts-str--right .addcontacts-str--itemleft::before {
+	top: 13%;
+}
+
 .infoadmin-str--employs {
 	overflow-y: visible;
 	height: auto;
@@ -1478,6 +1607,7 @@ p{
 }
 
 .employ-str--subtitle {
+	display: block;
 	margin-bottom: 15px;
 	align-self: flex-start;
 }

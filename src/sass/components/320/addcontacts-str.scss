@@ -1,0 +1,138 @@
+@media (max-width: 415px){
+    
+    .addcontacts-str {
+
+      width: 717px;
+      box-sizing: border-box;
+      margin-top: 15px;
+
+      &--left {
+        width: 260px;
+        height: auto;
+        overflow-y: visible;
+        border-right: none;
+        margin-bottom: 38px;
+      }
+
+      &--right {
+        width: 260px;
+        height: auto;
+        overflow-y: visible;
+        padding-left: 30px;
+        margin-bottom: 38px;
+      }
+
+      &--bb {
+        border-bottom: 1px solid #dcdcdc;
+        padding-bottom: 15px;
+        margin-bottom: 20px !important;
+      }
+
+      &--tel {
+        margin-bottom: 0;
+      }
+
+      &--listleft {
+        list-style-type: decimal;
+        padding-left: 20px;
+        counter-reset: item;
+        margin-bottom: 33px;
+      }
+
+      &--itemleft {
+
+      display: block;
+      position: relative;
+      margin-bottom: 5px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+        &::before {
+          content: counter(item) ". ";
+          counter-increment: item;
+          position: absolute;
+          top: 33%;
+          left: -28px;
+        }
+
+      }
+
+      &--edittel {
+        width: 100%;
+      }
+
+      &--form {
+        -js-display: flex;
+        display: flex;
+        margin-bottom: 22px;
+      }
+
+      &--input {
+        height: 40px;
+        padding: 10px;
+        border: 1px solid #dcdcdc;
+        width: 250px;
+      }
+
+      &--ok {
+        margin-left: 5px;
+        background-color: #ff7200;
+        color: #fff;
+        border-radius: 0;
+        border: none;
+
+        &:hover {
+          background-color: #fff;
+          border: 1px solid #dcdcdc;
+        }
+
+      }
+
+      &--addbtn {
+        margin-bottom: 32px;
+      }
+
+      &--email {
+        margin-bottom: 0;
+      }
+
+      &--editright {
+        -js-display: flex;
+        display: flex;
+        margin-left: 20px;
+      }
+
+      &--editemail {
+        -js-display: flex;
+        display: flex;
+        align-items: center;
+      }
+
+      &--mt {
+        margin-top: 28px;
+      }
+
+      &--footer {
+        border-top: 1px solid #dcdcdc;
+        -js-display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 28px;
+      }
+
+    }
+    
+    .addcontacts-str--right .addcontacts-str--itemleft {
+        
+        &::before {
+            top: 13%;
+        }
+        
+    }
+
+    
+}
