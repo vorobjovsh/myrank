@@ -1,6 +1,8 @@
 .header-str {
   padding: 0 15px;
   @include flex-between;
+  border-bottom: 1px solid #dcdcdc;
+  flex-basis: 100%;
 }
 
 .header-str__title {

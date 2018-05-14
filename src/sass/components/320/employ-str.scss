@@ -1,0 +1,33 @@
+@media (max-width: 415px){
+    
+    .employ-str {
+        width: 290px;
+        
+        &--left {
+            flex-basis: 100%;
+            box-sizing: border-box;
+            border-right: none;
+            overflow-y: visible;
+            padding-right: 0;
+            height: auto;
+        }
+        
+        &--right {
+            flex-basis: 100%;
+            box-sizing: border-box;
+            overflow-y: visible;
+            height: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        &--title {
+            text-align: center;
+            padding: 10px 15px;
+            background-color: #226377;
+          }
+
+        
+    }
+    
+}

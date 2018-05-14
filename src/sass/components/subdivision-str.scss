@@ -1,8 +1,7 @@
 .subdivision-str {
-  border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #dcdcdc;
-  height: 554px;
   @include flex-between;
+  flex-wrap: wrap;
 }
 
 .subdivision-str__left {

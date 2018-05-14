@@ -1,0 +1,33 @@
+@media (max-width: 415px){
+
+  .dnone {
+    display: none;
+  }
+
+  .pnone {
+    padding: 0;
+  }
+
+  #main {
+    padding: 0;
+  }
+
+  .p-block {
+    border-top: none;
+    padding: 0;
+    margin-bottom: 25px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+    
+  .wrapper-str {
+      
+        &--bt {
+            border-top: 8px solid #f95200;
+            width: 290px;
+            margin: 10% auto 0;
+        }
+      
+  }  
+
+}

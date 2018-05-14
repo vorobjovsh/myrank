@@ -1,0 +1,238 @@
+@media (max-width: 415px){
+
+  .uservisible-str {
+    list-style: none;
+    padding-left: 6px;
+    position: relative;
+
+    &::before {
+
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 0;
+      width: 1px;
+      height: calc(100% + 18px);
+      background: #ff7200;
+
+    }
+
+  }
+
+  .uservisible-str__sublist {
+    position: relative;
+    top: 0;
+    left: 0;
+    list-style: none;
+    padding-left: 12px;
+    padding-top: 0;
+    margin-bottom: 6px;
+
+    &::before {
+
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 6px;
+      width: 1px;
+      height: calc(100% - 16px);
+      background: #ff7200;
+
+    }
+
+  }
+
+  .uservisible-str__item {
+    width: auto;
+    box-shadow: none;
+    margin-bottom: 0;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    position: static;
+
+    &--blocktrash {
+      -js-display: flex;
+      display: flex;
+      justify-content: center;
+      flex-basis: 28px;
+    }
+
+    &--trash {
+      position: static;
+      background-image: url(../img/trash-admin-320.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      width: 12px;
+      height: 16px;
+    }
+
+    &--mark {
+
+      background-image: url(../img/arrow-bottom.png);
+      background-repeat: no-repeat;
+      background-position: 96% center;
+
+    }
+
+    &--mark-right {
+
+      background-image: url(../img/arrow-sub.png);
+      background-repeat: no-repeat;
+      background-position: 96% center;
+
+    }
+
+    &:hover {
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    &--addmain {
+      background-image: url(../img/plus.jpg);
+      background-repeat: no-repeat;
+      background-position: 8px center;
+      position: relative;
+
+      &::before {
+      content: '';
+      position: absolute;
+      top: 22px;
+      left: -6px;
+      width: 6px;
+      height: 1px;
+      background: #f95200;
+      }
+
+    }
+
+  }
+
+  .uservisible-str__subitem--topblock {
+    -js-display: flex;
+      display: flex;
+    align-items: center;
+  }
+
+  .uservisible-str__link-block {
+     -js-display: flex;
+      display: flex;
+    flex-direction: column;
+    padding: 12px 36px 12px 10px;
+    border-right: 1px solid #dcdcdc;
+    flex-basis: 263px;
+      
+      &--brnone {
+          border-right: none;
+      }  
+      
+  }
+
+  .uservisible-str__subitem {
+    width: auto;
+    box-shadow: none;
+    margin-bottom: 0;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    position: relative;
+
+    &::before {
+      width: 0px;
+    }
+
+     &::after {
+      width: 0px;
+    }
+
+    &:hover {
+      border: none;
+    }
+
+  }
+
+  .uservisible-str__sublist > .uservisible-str__subitem:nth-child(1)::before {
+    width: 0px;
+}
+
+  .uservisible-str__sublist > .uservisible-str__subitem::after {
+    width: 0px;
+}
+
+  .uservisible-str__sublink-block {
+     -js-display: flex;
+      display: flex;
+    flex-direction: column;
+    padding: 12px 36px 12px 10px;
+    flex-basis: 254px;
+    border-right: 1px solid #dcdcdc;
+  }
+
+  .uservisible-str__depart {
+    position: static;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 6px;
+
+    a {
+      width: 155px;
+    }
+
+    &::before {
+      width: 0px;
+    }
+
+  }
+
+  .uservisible-str__item--topblock {
+    -js-display: flex;
+      display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0.5px 0.9px 3px #cfe0db;
+    margin-bottom: 6px;
+    border-left: 3px solid #f95200;
+    border-top: 1px solid #cfe0db;
+    border-right: 1px solid #cfe0db;
+    border-bottom: 1px solid #cfe0db;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: -8px;
+      width: 6px;
+      height: 1px;
+      background: #f95200;
+    }
+
+  }
+
+  .uservisible-str__subitem--topblock {
+    width: auto;
+    position: relative;
+    margin-bottom: 6px;
+    border: 1px solid #cfe0db;
+    box-shadow: 0.5px 0.9px 3px #cfe0db;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: -6px;
+      width: 6px;
+      height: 1px;
+      background: #f95200;
+    }
+
+  }
+
+  .uservisible-str > .uservisible-str__item::before {
+    width: 0px;
+}
+
+}

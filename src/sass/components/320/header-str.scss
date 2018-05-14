@@ -1,0 +1,21 @@
+@media (max-width: 415px){
+
+  .header-str {
+    width: 100%;
+    order: 1;
+    padding-top: 15px;
+    padding-left: 25px;
+    margin: 0 auto 12px;
+    position: absolute;
+    top: 80px;
+    -js-display: flex;
+      display: flex;
+    justify-content: center;
+    border-bottom: none;
+  }
+
+  .header-str__title {
+    display: none;
+  }
+
+}
