@@ -7,8 +7,10 @@
             flex-basis: 100%;
             box-sizing: border-box;
             border-right: none;
+            border-bottom: 1px solid #dcdcdc;
             overflow-y: visible;
             padding-right: 0;
+            padding-bottom: 18px;
             height: auto;
         }
         
@@ -19,13 +21,61 @@
             height: auto;
             padding-left: 10px;
             padding-right: 10px;
+            padding-top: 18px;
         }
         
         &--title {
             text-align: center;
             padding: 10px 15px;
             background-color: #226377;
-          }
+        }
+        
+        &--list {
+          margin-bottom: 23px;
+        }
+        
+        &--search {
+            display: none;
+            order: 0;
+        }
+        
+        &--320-search {
+            -js-display: flex;
+            display: flex;
+            justify-content: center;
+        }
+        
+        &--footer {
+            border-top: none;
+            -js-display: flex;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+            padding-bottom: 27px;
+        }
+        
+        &--mr {
+            order: 2;
+            margin-right: 0;
+        }
+        
+        &--addbtn {
+            order: 1;
+            margin-bottom: 20px;
+        }
+        
+        &--flcenter {
+            -js-display: flex;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &--subtitle {
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
 
         
     }
