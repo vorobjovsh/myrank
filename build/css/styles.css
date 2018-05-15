@@ -428,6 +428,10 @@ p{
 	overflow-x: auto;
 }
 
+.subdivision-str__title {
+	margin-bottom: 20px;
+}
+
 .addcontacts-str {
 	width: 717px;
 	box-sizing: border-box;
