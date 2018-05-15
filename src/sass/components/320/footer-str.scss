@@ -97,7 +97,7 @@
      padding-top: 20px;
   }
 
-  .footer-str__applicatnew .footer-str__linkname {
+  /*.footer-str__applicatnew .footer-str__linkname {
 
     position: relative;
 
@@ -107,6 +107,23 @@
     position: absolute;
     top: -17px;
     right: -2px;
+    font-size: 36px;
+    color: #ff7200;
+    border-radius: 18px;
+  }
+
+  }*/
+
+  .footer-str__applicatnew .footer-str__itemleft {
+
+    position: relative;
+
+    &::after {
+    display: block;
+    content: "\00B7";
+    position: absolute;
+    top: -17px;
+    right: 2px;
     font-size: 36px;
     color: #ff7200;
     border-radius: 18px;
