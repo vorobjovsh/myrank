@@ -700,7 +700,7 @@ p{
 }
 
 .employ-str--320-search {
-	display: none;
+	display: none !important;
 }
 
 .employ-str--mr {

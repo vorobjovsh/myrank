@@ -88,18 +88,18 @@
   &--search {
     margin-right: auto;
   }
-    
+
   &--320-search {
-    display: none;
-  }  
+    display: none !important;
+  }
 
   &--mr {
     margin-right: 30px;
     height: 30px;
   }
-    
+
   &--subtitle {
      display: none;
-  }  
+  }
 
 }
