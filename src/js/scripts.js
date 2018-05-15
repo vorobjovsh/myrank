@@ -6,3 +6,4 @@
 //= scripts/components/infoadmin.js
 //= scripts/components/employ.js
 //= scripts/components/addcontact.js
+//= scripts/components/zoomicons.js

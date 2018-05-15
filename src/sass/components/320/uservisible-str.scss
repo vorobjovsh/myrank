@@ -16,8 +16,48 @@
       background: #ff7200;
 
     }
+      
+    &--bottomflex {
+        
+    } 
 
   }
+    
+  .js-uservisible-str {
+      
+      &--zoomicons {
+        width: 190px;
+        height: 60px;
+        border: 1px solid #dcdcdc;
+        box-shadow: 4px 7px 8px #cfe0db;
+        position: absolute;
+        z-index: 100;
+        background-color: #fff;
+        padding: 0 15px;
+      }
+      
+   } 
+    
+    .js-uservisible-str--zoomicons > .uservisible-str__sublink--number {
+        display: none;
+    }
+    
+    .js-uservisible-str--zoomicons .uservisible-str__sublink--imgman {
+        width: 30px;
+        height: 30px;
+        margin-right: 30px;
+    }
+    
+    .js-uservisible-str--zoomicons .uservisible-str__sublink--imgcall {
+        width: 30px;
+        height: 30px;
+        margin-right: 30px;
+    }
+    
+    .js-uservisible-str--zoomicons .uservisible-str__sublink--imggps {
+        width: 22px;
+        height: 30px;
+    }
 
   .uservisible-str__sublist {
     position: relative;
