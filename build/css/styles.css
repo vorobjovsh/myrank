@@ -1812,6 +1812,13 @@ p{
 	align-items: center;
 }
 
+.uservisible-str__subitem--topblock:hover {
+	border-top: 1px solid #f95200;
+	border-right: 1px solid #f95200;
+	border-left: 1px solid #f95200;
+	border-bottom: 1px solid #f95200;
+}
+
 .uservisible-str__link-block {
 	-js-display: flex;
 	display: flex;
@@ -1901,6 +1908,12 @@ p{
 	width: 6px;
 	height: 1px;
 	background: #f95200;
+}
+
+.uservisible-str__item--topblock:hover {
+	border-top: 1px solid #f95200;
+	border-right: 1px solid #f95200;
+	border-bottom: 1px solid #f95200;
 }
 
 .uservisible-str__subitem--topblock {
