@@ -85,16 +85,18 @@ console.log(itemLinks);
       }
 
     } else if( !elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex") && itemLinks.ulAll !== null) {
-console.log(itemLinks.blocks);
       if(itemLinks.blocks.classList.contains("uservisible-str__link-block") || itemLinks.blocks.classList.contains("uservisible-str__sublink-block")) {
 
-        if(itemLinks.temp !== '') {
+        if(itemLinks.temp !== '' && itemLinks.temp !== itemLinks.ulAll) {
           itemLinks.temp.classList.remove("js-block");
+        itemLinks.tempMark.classList.remove("uservisible-str__item--mark-right");
+         itemLinks.tempMark.classList.add("uservisible-str__item--mark");
         }
 
-        itemLinks.temp = itemLinks.ulAll;
+      itemLinks.temp = itemLinks.ulAll;
+      itemLinks.tempMark = itemLinks.blocks;
 
-        itemLinks.ulAll.classList.toggle("js-block");
+      itemLinks.ulAll.classList.toggle("js-block");
 
       if(itemLinks.ulAll.classList.contains("js-block")) {
          itemLinks.blocks.classList.remove("uservisible-str__item--mark");
