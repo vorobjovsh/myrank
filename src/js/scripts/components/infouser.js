@@ -10,4 +10,4 @@ function infoUser(event) {
 
 }
 
-userItem.addEventListener("click", infoUser);
+//userItem.addEventListener("click", infoUser);
