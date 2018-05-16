@@ -1,24 +1,25 @@
 // Скрипт, раскрывающий и закрывающий подменю по клику
 const userSubMenu = document.querySelector(".uservisible-str");
 
+const itemLinks = {
+      blocks: '',
+      item: '',
+      ulAll: '',
+      temp: '',
+      tempMark: ''
+    };
+
 function userMenuClick(event) {
     event.preventDefault();
     let elem = event.target;
     let wicon = $(window).width();
     console.log(elem);
 
-    const itemLinks = {
-      blocks: '',
-      item: '',
-      ulAll: ''
-    };
-
-     if(elem.parentNode.parentNode.classList.contains("uservisible-str__link-block")) {
+   if(elem.parentNode.parentNode.classList.contains("uservisible-str__link-block")) {
 
       itemLinks.blocks = elem.parentNode.parentNode;
       itemLinks.item = itemLinks.blocks.parentNode;
       itemLinks.ulAll = itemLinks.item.nextSibling;
-      console.log(itemLinks.ulAll);
 
     }
 
@@ -60,6 +61,15 @@ function userMenuClick(event) {
     }
 
     if(wicon > 1023 && itemLinks.ulAll !== null && !elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex")) {
+console.log(itemLinks);
+      if(itemLinks.temp !== '' && itemLinks.temp !== itemLinks.ulAll) {
+          itemLinks.temp.classList.remove("js-block");
+        itemLinks.tempMark.classList.remove("uservisible-str__item--mark-right");
+         itemLinks.tempMark.classList.add("uservisible-str__item--mark");
+        }
+
+      itemLinks.temp = itemLinks.ulAll;
+      itemLinks.tempMark = itemLinks.blocks;
 
       itemLinks.ulAll.classList.toggle("js-block");
 
@@ -77,6 +87,12 @@ function userMenuClick(event) {
     } else if( !elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex") && itemLinks.ulAll !== null) {
 console.log(itemLinks.blocks);
       if(itemLinks.blocks.classList.contains("uservisible-str__link-block") || itemLinks.blocks.classList.contains("uservisible-str__sublink-block")) {
+
+        if(itemLinks.temp !== '') {
+          itemLinks.temp.classList.remove("js-block");
+        }
+
+        itemLinks.temp = itemLinks.ulAll;
 
         itemLinks.ulAll.classList.toggle("js-block");
 
