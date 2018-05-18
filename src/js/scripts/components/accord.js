@@ -6,7 +6,9 @@ const itemLinks = {
       item: '',
       ulAll: '',
       temp: '',
-      tempMark: ''
+      tempMark: '',
+      level: 1,
+      firstUlMark: ''
     };
 
 function userMenuClick(event) {
@@ -61,17 +63,33 @@ function userMenuClick(event) {
     }
 
     if(wicon > 1023 && itemLinks.ulAll !== null && !elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex")) {
-console.log(itemLinks);
-      if(itemLinks.temp !== '' && itemLinks.temp !== itemLinks.ulAll) {
-          itemLinks.temp.classList.remove("js-block");
-        itemLinks.tempMark.classList.remove("uservisible-str__item--mark-right");
-         itemLinks.tempMark.classList.add("uservisible-str__item--mark");
+      if(itemLinks.item.parentNode.parentNode.classList.contains("uservisible-str")) {
+
+        itemLinks.firstUlMark = $(".uservisible-str__item").find(".uservisible-str__item--mark-right");
+
+        if(itemLinks.firstUlMark === itemLinks.blocks) {
+
+                itemLinks.ulAll.classList.toggle("js-block");
+
+            if(itemLinks.ulAll.classList.contains("js-block")) {
+               itemLinks.blocks.classList.remove("uservisible-str__item--mark");
+               itemLinks.blocks.classList.add("uservisible-str__item--mark-right");
+
+            } else {
+
+              itemLinks.blocks.classList.remove("uservisible-str__item--mark-right");
+               itemLinks.blocks.classList.add("uservisible-str__item--mark");
+
+            }
+
+        } else if(itemLinks.firstUlMark.length > 0) {
+           itemLinks.firstUlMark[0].parentNode.nextSibling.classList.remove("js-block");
+           itemLinks.firstUlMark[0].classList.remove("uservisible-str__item--mark-right");
+          itemLinks.firstUlMark[0].classList.add("uservisible-str__item--mark");
+
         }
 
-      itemLinks.temp = itemLinks.ulAll;
-      itemLinks.tempMark = itemLinks.blocks;
-
-      itemLinks.ulAll.classList.toggle("js-block");
+        itemLinks.ulAll.classList.toggle("js-block");
 
       if(itemLinks.ulAll.classList.contains("js-block")) {
          itemLinks.blocks.classList.remove("uservisible-str__item--mark");
@@ -83,6 +101,9 @@ console.log(itemLinks);
          itemLinks.blocks.classList.add("uservisible-str__item--mark");
 
       }
+
+      }
+
 
     } else if( !elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex") && itemLinks.ulAll !== null) {
       if(itemLinks.blocks.classList.contains("uservisible-str__link-block") || itemLinks.blocks.classList.contains("uservisible-str__sublink-block")) {
