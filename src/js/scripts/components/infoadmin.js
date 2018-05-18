@@ -8,4 +8,4 @@ function infoAdmin(event) {
 
 }
 
-//btnTrashArr.addEventListener("click", infoAdmin);
+btnTrashArr.addEventListener("click", infoAdmin);
