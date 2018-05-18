@@ -1,0 +1,46 @@
+@media (max-width: 768px){
+
+    .wrapper-str {
+
+        &--spantitle {
+            font-size: 18px;
+        }
+
+    }
+
+    .infouser-str {
+
+      &--title {
+        font-size: 18px;
+      }
+
+    }
+
+    .infouser-str__title {
+        font-size: 16px;
+    }
+
+    .infouser-str__link {
+        font-size: 14px;
+    }
+
+    .infouser-str__vacancy {
+        font-size: 12px;
+    }
+
+    .employ-str {
+
+      &--title {
+        font-size: 14px;
+      }
+
+      &--subtitle {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          font-size: 12px;
+          color: #777;
+      }
+
+    }
+
+}

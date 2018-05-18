@@ -1,0 +1,65 @@
+@media (max-width: 768px){
+
+  .infouser-str {
+
+      &--bt {
+        border-top: 8px solid #f95200;
+        width: 290px;
+        margin: 10% auto 0;
+      }
+
+
+    }
+
+    .infouser-str__block {
+      @include flex-between;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .infouser-str__employs {
+      flex-basis: 100%;
+      box-sizing: border-box;
+      border-right: none;
+      border-bottom: 1px solid #dcdcdc;
+      padding-top: 15px;
+      overflow-y: visible;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    .infouser-str__contacts {
+      flex-basis: 100%;
+      box-sizing: border-box;
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-bottom: 40px;
+      overflow-y: visible;
+      margin-bottom: 0;
+    }
+
+    .infouser-str__employs-list {
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+
+    .infouser-str__img {
+      display: block;
+      width: 45px;
+      height: 45px;
+      margin-right: 15px;
+    }
+
+    .infouser-str__fio {
+        width: 188px;
+        padding-right: 5px;
+    }
+
+    .infouser-str__tel {
+      margin-bottom: 0;
+      padding-right: 5px;
+    }
+
+}

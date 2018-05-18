@@ -1,0 +1,40 @@
+@media (max-width: 992px){
+
+  .footer-str {
+    padding: 20px 15px 0;
+    border-bottom: none;
+    @include flex-between;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+
+  .footer-str__applicat {
+    flex-basis: 50%;
+    border-right: none;
+    padding-right: 0;
+    padding-top: 0;
+    order: 0;
+    box-sizing: border-box;
+  }
+
+  .footer-str__applicatnew {
+    flex-basis: 50%;
+    order: 1;
+    border-bottom: none;
+    padding-bottom: 0;
+    box-sizing: border-box;
+  }
+
+  .footer-str__block {
+    @include flex-between;
+    flex-wrap: wrap;
+
+    &--pl {
+      padding-left: 15px;
+    }
+
+  }
+
+
+
+}

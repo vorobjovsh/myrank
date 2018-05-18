@@ -1,0 +1,64 @@
+@media (max-width: 768px){
+
+  .infoadmin-str {
+
+  &--employs {
+    overflow-y: visible;
+    height: auto;
+    padding-top: 38px;
+    padding-bottom: 20px;
+  }
+
+  &--contacts {
+    overflow-y: visible;
+    height: auto;
+    padding-top: 38px;
+  }
+
+  &--adduser {
+  display: block;
+  padding: 10px 10px 12px 40px;
+  cursor: pointer;
+  border: 1px solid #f95200;
+  background-image: url(../img/plus.jpg);
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  border: 1px solid #f95200;
+  margin: auto;
+  }
+
+  &--adress {
+    margin-bottom: 30px;
+  }
+
+  &--edit {
+    margin-left: auto;
+    -js-display: flex;
+    display: flex;
+    align-items: center;
+  }
+
+  &--pens {
+    background-image: url(../img/pens.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 25px;
+    height: 23px;
+    margin-top: 2px;
+  }
+
+  &--trash {
+    background-image: url(../img/trash-mini.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 25px;
+    height: 23px;
+  }
+
+  &--editcontact {
+    @include flex-between;
+  }
+
+}
+
+}

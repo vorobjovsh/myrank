@@ -13,7 +13,7 @@
       top: -40px;
       left: 0;
       width: 1px;
-      height: calc(100% + 18px);
+      height: calc(100% - 45px);
       background: #c2c2c2;
 
     }
@@ -170,7 +170,7 @@
      -js-display: flex;
       display: flex;
     flex-direction: column;
-    padding: 12px 36px 12px 10px;
+    padding: 20px 36px 20px 10px;
     border-right: 1px solid #dcdcdc;
     flex-basis: 92%;
     //flex-basis: 263px;
@@ -217,7 +217,7 @@
      -js-display: flex;
       display: flex;
     flex-direction: column;
-    padding: 12px 36px 12px 10px;
+    padding: 18px 36px 18px 10px;
     flex-basis: 92%;
     //flex-basis: 254px;
     border-right: 1px solid #dcdcdc;
