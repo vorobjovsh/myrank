@@ -8,5 +8,5 @@
 //= scripts/components/addcontact.js
 //= scripts/components/zoomicons.js
 //= scripts/components/addstructure.js
+//= scripts/components/addusers.js
 //= scripts/components/accord.js
-
