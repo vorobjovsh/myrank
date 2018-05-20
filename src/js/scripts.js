@@ -7,4 +7,6 @@
 //= scripts/components/employ.js
 //= scripts/components/addcontact.js
 //= scripts/components/zoomicons.js
+//= scripts/components/addstructure.js
 //= scripts/components/accord.js
+

@@ -1,7 +1,7 @@
 // Скрипт выбора панелей User или Admin
 const maket7 = document.querySelector(".maket-7");
 const maket8 = document.querySelector(".maket-8");
-const addSubdivision = document.querySelector(".subdivision-str--addbtn");
+const addSubdivision = document.querySelector(".subdivision-str--addstructure");
 const addUser = document.querySelector(".subdivision-str--user");
 const addAdmin = document.querySelector(".subdivision-str--admin");
 
