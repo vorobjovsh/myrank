@@ -37,6 +37,10 @@
   border-top: 1px solid #cfe0db;
   border-right: 1px solid #cfe0db;
   border-bottom: 1px solid #cfe0db;
+    
+  /*&:last-of-type {
+    margin-bottom: 0;
+  }*/
 
   &:hover {
     border-top: 1px solid #f95200;
@@ -117,6 +121,7 @@
 }
 
 .uservisible-str__sublist {
+  display: none;
   position: absolute;
   list-style: none;
   padding-left: 0;
@@ -130,7 +135,7 @@
     top: 25px;
     left: -12px;
     width: 1px;
-    height: calc(100% - 48px);
+    height: calc(100% - 42px);
     background: #f00;
 
   }
@@ -148,6 +153,10 @@
     border: 1px solid #f95200;
     box-sizing: border-box;
   }
+    
+  /*&:last-of-type {
+    margin-bottom: 0;
+  }*/  
 
 }
 

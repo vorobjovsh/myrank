@@ -1,144 +1,102 @@
 // Скрипт, раскрывающий и закрывающий подменю по клику
-const userSubMenu = document.querySelector(".uservisible-str");
 
-const itemLinks = {
-      blocks: '',
-      item: '',
-      ulAll: '',
-      temp: '',
-      tempMark: '',
-      level: 1,
-      firstUlMark: ''
-    };
+$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
 
-function userMenuClick(event) {
-    event.preventDefault();
-    let elem = event.target;
-    let wicon = $(window).width();
-    console.log(elem);
+		// Variables privadas
+		var links = this.el.find('.uservisible-str__item--topblock');
+        
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown);
+	}
 
-   if(elem.parentNode.parentNode.classList.contains("uservisible-str__link-block")) {
-
-      itemLinks.blocks = elem.parentNode.parentNode;
-      itemLinks.item = itemLinks.blocks.parentNode;
-      itemLinks.ulAll = itemLinks.item.nextSibling;
-
-    }
-
-    if(elem.parentNode.parentNode.classList.contains("uservisible-str__sublink-block")) {
-
-      itemLinks.blocks = elem.parentNode.parentNode;
-      itemLinks.item = itemLinks.blocks.parentNode;
-      itemLinks.ulAll = itemLinks.item.nextSibling;
-      console.log(itemLinks.ulAll);
-
-    }
-
-    if(elem.classList.contains("uservisible-str--topflex")) {
-       itemLinks.blocks = elem.parentNode;
-       itemLinks.item = itemLinks.blocks.parentNode;
-       itemLinks.ulAll = itemLinks.item.nextSibling;
-       console.log(itemLinks.ulAll);
-    }
-
-    if(elem.classList.contains("uservisible-str--bottomflex")) {
-       itemLinks.blocks = elem.previousSibling;
-       itemLinks.item = itemLinks.blocks.parentNode.parentNode;
-       itemLinks.ulAll = itemLinks.item.nextSibling;
-       console.log(itemLinks.ulAll);
-    }
-
-    if(elem.classList.contains("uservisible-str__sublink-block")) {
-       itemLinks.blocks = elem;
-       itemLinks.item = itemLinks.blocks.parentNode;
-       itemLinks.ulAll = itemLinks.item.nextSibling;
-       console.log(itemLinks.ulAll);
-    }
-
-    if(elem.classList.contains("uservisible-str__item--mark") || elem.classList.contains("uservisible-str__item--mark-right")) {
-       itemLinks.blocks = elem;
-       itemLinks.item = itemLinks.blocks.parentNode;
-       itemLinks.ulAll = itemLinks.item.nextSibling;
-       console.log(itemLinks.ulAll);
-    }
-
-    if(wicon > 1023 && itemLinks.ulAll !== null && !elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex")) {
-      if(itemLinks.item.parentNode.parentNode.classList.contains("uservisible-str")) {
-
-        itemLinks.firstUlMark = $(".uservisible-str__item").find(".uservisible-str__item--mark-right");
-
-        if(itemLinks.firstUlMark === itemLinks.blocks) {
-
-                itemLinks.ulAll.classList.toggle("js-block");
-
-            if(itemLinks.ulAll.classList.contains("js-block")) {
-               itemLinks.blocks.classList.remove("uservisible-str__item--mark");
-               itemLinks.blocks.classList.add("uservisible-str__item--mark-right");
-
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el,
+			$this = $(this),
+			$next = $this.next();
+          
+        if($this.parent().find('.uservisible-str__sublist').length > 0) {
+           
+            $next.toggle();
+            
+            if($this.children('.uservisible-str__link-block').hasClass('uservisible-str__item--mark-right')) {
+               
+                $this.children('.uservisible-str__link-block').removeClass('uservisible-str__item--mark-right');
+                $this.children('.uservisible-str__link-block').addClass('uservisible-str__item--mark');
+                
             } else {
-
-              itemLinks.blocks.classList.remove("uservisible-str__item--mark-right");
-               itemLinks.blocks.classList.add("uservisible-str__item--mark");
-
+                
+                $this.children('.uservisible-str__link-block').removeClass('uservisible-str__item--mark');
+                $this.children('.uservisible-str__link-block').addClass('uservisible-str__item--mark-right');
+                
             }
+            
+        } 
+   
+		if (!e.data.multiple) {
+            
+			$el.find('.uservisible-str__sublist').not($next).slideUp(50).parent().find('.uservisible-str__link-block:first').removeClass('uservisible-str__item--mark-right').addClass('uservisible-str__item--mark');
+            
+            
+            
+		}
+        
+	}	
 
-        } else if(itemLinks.firstUlMark.length > 0) {
-           itemLinks.firstUlMark[0].parentNode.nextSibling.classList.remove("js-block");
-           itemLinks.firstUlMark[0].classList.remove("uservisible-str__item--mark-right");
-          itemLinks.firstUlMark[0].classList.add("uservisible-str__item--mark");
-
-        }
-
-        itemLinks.ulAll.classList.toggle("js-block");
-
-      if(itemLinks.ulAll.classList.contains("js-block")) {
-         itemLinks.blocks.classList.remove("uservisible-str__item--mark");
-         itemLinks.blocks.classList.add("uservisible-str__item--mark-right");
-
-      } else {
-
-        itemLinks.blocks.classList.remove("uservisible-str__item--mark-right");
-         itemLinks.blocks.classList.add("uservisible-str__item--mark");
-
-      }
-
-      }
+	var accordion = new Accordion($('.uservisible-str.adminvisible-str'), false);
+    
+    var accordionUser = new Accordion($('.js-uservisible-str'), false);
+    
+});
 
 
-    } else if( !elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex") && itemLinks.ulAll !== null) {
-      if(itemLinks.blocks.classList.contains("uservisible-str__link-block") || itemLinks.blocks.classList.contains("uservisible-str__sublink-block")) {
+$(function() {
+	var Subaccordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
 
-        if(itemLinks.temp !== '' && itemLinks.temp !== itemLinks.ulAll) {
-          itemLinks.temp.classList.remove("js-block");
-        itemLinks.tempMark.classList.remove("uservisible-str__item--mark-right");
-         itemLinks.tempMark.classList.add("uservisible-str__item--mark");
-        }
+		// Variables privadas
+		var links = this.el.find('.uservisible-str__subitem--topblock');
+        
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown);
+	}
 
-      itemLinks.temp = itemLinks.ulAll;
-      itemLinks.tempMark = itemLinks.blocks;
+	Subaccordion.prototype.dropdown = function(e) {
+		var $el = e.data.el,
+			$this = $(this),
+			$next = $this.next();
 
-      itemLinks.ulAll.classList.toggle("js-block");
+		if($this.parent().find('.uservisible-str__sublist').length > 0) {
+           
+            $next.toggle();
+            
+            if($this.children('.uservisible-str__sublink-block').hasClass('uservisible-str__item--mark-right')) {
+               
+                $this.children('.uservisible-str__sublink-block').removeClass('uservisible-str__item--mark-right');
+                $this.children('.uservisible-str__sublink-block').addClass('uservisible-str__item--mark');
+                
+            } else {
+                
+                $this.children('.uservisible-str__sublink-block').removeClass('uservisible-str__item--mark');
+                $this.children('.uservisible-str__sublink-block').addClass('uservisible-str__item--mark-right');
+                
+            }
+            
+        } 
+        
 
-      if(itemLinks.ulAll.classList.contains("js-block")) {
-         itemLinks.blocks.classList.remove("uservisible-str__item--mark");
-         itemLinks.blocks.classList.add("uservisible-str__item--mark-right");
+		if (!e.data.multiple) {
+            
+           $this.parent().parent().find('.uservisible-str__sublist').not($next).slideUp(50).parent().find('.uservisible-str__sublink-block:first').removeClass('uservisible-str__item--mark-right').addClass('uservisible-str__item--mark');
+                
+		}
+	}	
 
-      } else {
-
-        itemLinks.blocks.classList.remove("uservisible-str__item--mark-right");
-         itemLinks.blocks.classList.add("uservisible-str__item--mark");
-
-      }
-
-      }
-
-
-    }
-
-}
-
-
-
-userSubMenu.addEventListener("click", userMenuClick);
-
-userItem.addEventListener("click", userMenuClick);
+    var subAccordion = new Subaccordion($('.uservisible-str.adminvisible-str'), false);
+    
+    var subAccordionUser = new Subaccordion($('.js-uservisible-str'), false);
+    
+});

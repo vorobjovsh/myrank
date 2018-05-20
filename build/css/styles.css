@@ -853,7 +853,9 @@ p{
 	border-left: 2px solid #f95200;
 	border-top: 1px solid #cfe0db;
 	border-right: 1px solid #cfe0db;
-	border-bottom: 1px solid #cfe0db;
+	border-bottom: 1px solid #cfe0db; /*&:last-of-type {
+    margin-bottom: 0;
+  }*/
 }
 
 .uservisible-str__item:hover {
@@ -930,6 +932,7 @@ p{
 }
 
 .uservisible-str__sublist {
+	display: none;
 	position: absolute;
 	list-style: none;
 	padding-left: 0;
@@ -943,7 +946,7 @@ p{
 	top: 25px;
 	left: -12px;
 	width: 1px;
-	height: calc(100% - 48px);
+	height: calc(100% - 42px);
 	background: #f00;
 }
 
@@ -952,7 +955,9 @@ p{
 	position: relative;
 	margin-bottom: 6px;
 	border: 1px solid #cfe0db;
-	box-shadow: 0.5px 0.9px 3px #cfe0db;
+	box-shadow: 0.5px 0.9px 3px #cfe0db; /*&:last-of-type {
+    margin-bottom: 0;
+  }*/
 }
 
 .uservisible-str__subitem:hover {
@@ -1778,6 +1783,10 @@ p{
 	padding: 0 15px;
 }
 
+.js-uservisible-str::before {
+	height: calc(100% - 7px);
+}
+
 .js-uservisible-str--zoomicons > .uservisible-str__sublink--number {
 	display: none;
 }
@@ -1817,6 +1826,10 @@ p{
 	width: 1px;
 	height: calc(100% - 16px);
 	background: #c2c2c2;
+}
+
+.js-uservisible-str .uservisible-str__sublist::before {
+	height: calc(100% - 11px);
 }
 
 .uservisible-str__item {
@@ -1908,6 +1921,10 @@ p{
 	border-right: none;
 }
 
+.js-uservisible-str .uservisible-str__link-block {
+	flex-basis: 100%;
+}
+
 .uservisible-str__subitem {
 	width: auto;
 	box-shadow: none;
@@ -1946,6 +1963,11 @@ p{
 	padding: 12px 36px 12px 10px;
 	flex-basis: 254px;
 	border-right: 1px solid #dcdcdc;
+}
+
+.js-uservisible-str .uservisible-str__sublink-block {
+	flex-basis: 100%;
+	border-right: none;
 }
 
 .uservisible-str__depart {
@@ -2636,6 +2658,10 @@ p{
 	padding: 0 15px;
 }
 
+.js-uservisible-str::before {
+	height: calc(100% - 7px);
+}
+
 .js-uservisible-str--zoomicons > .uservisible-str__sublink--number {
 	display: none;
 }
@@ -2675,6 +2701,10 @@ p{
 	width: 1px;
 	height: calc(100% - 16px);
 	background: #c2c2c2;
+}
+
+.js-uservisible-str .uservisible-str__sublist::before {
+	height: calc(100% - 11px);
 }
 
 .uservisible-str__item {
@@ -2766,6 +2796,10 @@ p{
 	border-right: none;
 }
 
+.js-uservisible-str .uservisible-str__link-block {
+	flex-basis: 100%;
+}
+
 .uservisible-str__subitem {
 	width: auto;
 	box-shadow: none;
@@ -2804,6 +2838,11 @@ p{
 	padding: 12px 36px 12px 10px;
 	flex-basis: 254px;
 	border-right: 1px solid #dcdcdc;
+}
+
+.js-uservisible-str .uservisible-str__sublink-block {
+	flex-basis: 100%;
+	border-right: none;
 }
 
 .uservisible-str__depart {
@@ -3494,6 +3533,10 @@ p{
 	padding: 0 15px;
 }
 
+.js-uservisible-str::before {
+	height: calc(100% - 23px);
+}
+
 .js-uservisible-str--zoomicons > .uservisible-str__sublink--number {
 	display: none;
 }
@@ -3533,6 +3576,10 @@ p{
 	width: 1px;
 	height: calc(100% - 16px);
 	background: #c2c2c2;
+}
+
+.js-uservisible-str .uservisible-str__sublist::before {
+	height: calc(100% - 23px);
 }
 
 .uservisible-str__item {
@@ -3624,6 +3671,10 @@ p{
 	border-right: none;
 }
 
+.js-uservisible-str .uservisible-str__link-block {
+	flex-basis: 100%;
+}
+
 .uservisible-str__subitem {
 	width: auto;
 	box-shadow: none;
@@ -3662,6 +3713,11 @@ p{
 	padding: 18px 36px 18px 10px;
 	flex-basis: 92%;
 	border-right: 1px solid #dcdcdc;
+}
+
+.js-uservisible-str .uservisible-str__sublink-block {
+	flex-basis: 100%;
+	border-right: none;
 }
 
 .uservisible-str__depart {

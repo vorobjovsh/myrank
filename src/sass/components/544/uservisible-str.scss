@@ -36,6 +36,12 @@
         background-color: #fff;
         padding: 0 15px;
       }
+      
+      &::before {
+
+      height: calc(100% - 7px);
+
+    }
 
    }
 
@@ -82,6 +88,16 @@
     }
 
   }
+    
+   .js-uservisible-str .uservisible-str__sublist {
+        
+        &::before {
+
+          height: calc(100% - 11px);
+
+        }
+        
+    } 
 
   .uservisible-str__item {
     width: auto;
@@ -179,6 +195,10 @@
       }
 
   }
+    
+  .js-uservisible-str .uservisible-str__link-block {
+        flex-basis: 100%;
+    }  
 
   .uservisible-str__subitem {
     width: auto;
@@ -220,6 +240,11 @@
     flex-basis: 254px;
     border-right: 1px solid #dcdcdc;
   }
+    
+  .js-uservisible-str .uservisible-str__sublink-block {
+        flex-basis: 100%;
+        border-right: none;
+    }  
 
   .uservisible-str__depart {
     position: static;
