@@ -5,6 +5,8 @@ function addUsersBtn(event) {
     event.preventDefault();
 
        $("#myModal-employ-7").modal("show");
+    
+       $("#myModal-infoadmin-7").modal("hide");
 
 }
 
@@ -17,6 +19,8 @@ function addContactsBtn(event) {
     event.preventDefault();
 
        $("#myModal-addcontact-7").modal("show");
+    
+       $("#myModal-infoadmin-7").modal("hide");
 
 }
 
