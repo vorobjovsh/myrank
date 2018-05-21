@@ -31,6 +31,7 @@ function addToAdmin(evt) {
   $("#myModal-option-2").modal("hide");
   maket2.classList.remove("js-block");
   maket7.classList.add("js-block");
+  topPositions();  
 }
 
 // Переходим в панель User
