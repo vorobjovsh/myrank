@@ -13,9 +13,11 @@ arrSublist.forEach(function(item, i) {
   item.classList.add(`js-sublist-${i}`);
 });
 
-console.log(arrSublist);
-
 const arrSublistUser = document.querySelectorAll(".js-uservisible-str .uservisible-str__sublist");
+
+arrSublistUser.forEach(function(item, i) {
+  item.classList.add(`js-sublistuser-${i}`);
+});
    
 function topPositions() {
     let lineTop;
@@ -55,10 +57,7 @@ function topPositions() {
         document.querySelector('head').appendChild(style);
         
     }
-    
-    //console.log(lineTop);
-    //console.log(lineBottom);
-    //console.log(getComputedStyle(jsMenuUser, ":before").height);    
+        
 }
     
     
@@ -77,6 +76,8 @@ function addSubLines() {
     
     let wicon = $(window).width();
     
+    if(maket7.classList.contains("js-block")) {
+        
     arrSublist.forEach(function(item, i) {
       
     let lineTopSub = getCoords(item).top;
@@ -97,11 +98,44 @@ function addSubLines() {
     let style = document.createElement('style');
             
     style.innerHTML = '.uservisible-str__sublist.js-sublist-' + i + '::before {height: ' + heightLineSub + 'px;}';
-    console.log(style);
+    
 
     document.querySelector('head').appendChild(style); 
         
     });
+        
+    }
+    
+    
+    if(maket8.classList.contains("js-block")) {
+        
+    arrSublistUser.forEach(function(item, i) {
+      
+    let lineTopSub = getCoords(item).top;
+    let lineTopSubCorrect = lineTopSub - 6;
+    if(wicon > 767) {
+       lineTopSubCorrect = lineTopSub;
+    }
+    let lineBottomEl = item.lastElementChild;
+
+    let lineBottomSub = getCoords(lineBottomEl).top;
+    let lineBottomSubCorrect = lineBottomSub + 26;
+    if(wicon > 767) {
+       lineBottomSubCorrect = lineBottomSub + 1;
+    }
+
+    let heightLineSub = lineBottomSubCorrect - lineTopSubCorrect;
+
+    let style = document.createElement('style');
+            
+    style.innerHTML = '.uservisible-str__sublist.js-sublistuser-' + i + '::before {height: ' + heightLineSub + 'px;}';
+    
+
+    document.querySelector('head').appendChild(style); 
+        
+    });
+        
+    }
          
 }
 
