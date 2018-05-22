@@ -5,10 +5,10 @@ $(function() {
 		this.el = el || {};
 		this.multiple = multiple || false;
 
-		// Variables privadas
+		
 		var links = this.el.find('.uservisible-str__item--topblock');
         
-		// Evento
+		
 		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown);
 	}
 
@@ -16,47 +16,46 @@ $(function() {
 		var $el = e.data.el,
 			$this = $(this),
 			$next = $this.next();
-        
+        console.log(e.target);
           
-        if($this.parent().find('.uservisible-str__sublist').length > 0) {
-           
+        if($this.parent().find('.uservisible-str__sublist').length > 0 && e.target.classList.contains('js-mark')) {
+            
+           //console.log($this[0].children[1]);
+            
             $next.toggle();
             
-            if($this.children('.uservisible-str__link-block').hasClass('uservisible-str__item--mark-right')) {
+           if($this.find('.js-mark').hasClass('uservisible-str__item--mark-right')) {
                
-                $this.children('.uservisible-str__link-block').removeClass('uservisible-str__item--mark-right');
-                $this.children('.uservisible-str__link-block').addClass('uservisible-str__item--mark');
+                $this.find('.js-mark').removeClass('uservisible-str__item--mark-right');
+                $this.find('.js-mark').addClass('uservisible-str__item--mark');
                 
             } else {
                 
-                $this.children('.uservisible-str__link-block').removeClass('uservisible-str__item--mark');
-                $this.children('.uservisible-str__link-block').addClass('uservisible-str__item--mark-right');
+                $this.find('.js-mark').removeClass('uservisible-str__item--mark');
+                $this.find('.js-mark').addClass('uservisible-str__item--mark-right');
                 
             }
             
             setTimeout(() => {
-                let str = $next[0].className;
-                let arr = str.split("-");
-                let numSub = arr[arr.length - 1];
                 topPositions();
-                addSubLines($next[0], numSub);
+                addSubLines();
             }, 500);
+            
+            
+            if (!e.data.multiple) {
+                
+                $el.find('.uservisible-str__sublist').not($next).slideUp(50).parent().find('.uservisible-str__link-block:first').parent().find('.js-mark').removeClass('uservisible-str__item--mark-right').addClass('uservisible-str__item--mark');
+
+                setTimeout(() => {
+                    topPositions();
+                    addSubLines();
+                }, 500);
+
+            }
             
         } 
    
-		if (!e.data.multiple) {
-            
-			$el.find('.uservisible-str__sublist').not($next).slideUp(50).parent().find('.uservisible-str__link-block:first').removeClass('uservisible-str__item--mark-right').addClass('uservisible-str__item--mark');
-            
-            setTimeout(() => {
-                let str = $next[0].className;
-                let arr = str.split("-");
-                let numSub = arr[arr.length - 1];
-                topPositions();
-                addSubLines($next[0], numSub);
-            }, 500);
-            
-		}
+		
         
 	}	
 
@@ -84,46 +83,47 @@ $(function() {
 			$this = $(this),
 			$next = $this.next();
 
-		if($this.parent().find('.uservisible-str__sublist').length > 0) {
+		if($this.parent().find('.uservisible-str__sublist').length > 0  && e.target.classList.contains('js-mark')) {
            
             $next.toggle();
             
-            if($this.children('.uservisible-str__sublink-block').hasClass('uservisible-str__item--mark-right')) {
+            if($this.find('.js-mark').hasClass('uservisible-str__item--mark-right')) {
                
-                $this.children('.uservisible-str__sublink-block').removeClass('uservisible-str__item--mark-right');
-                $this.children('.uservisible-str__sublink-block').addClass('uservisible-str__item--mark');
+                $this.find('.js-mark').removeClass('uservisible-str__item--mark-right');
+                $this.find('.js-mark').addClass('uservisible-str__item--mark');
                 
             } else {
                 
-                $this.children('.uservisible-str__sublink-block').removeClass('uservisible-str__item--mark');
-                $this.children('.uservisible-str__sublink-block').addClass('uservisible-str__item--mark-right');
+                $this.find('.js-mark').removeClass('uservisible-str__item--mark');
+                $this.find('.js-mark').addClass('uservisible-str__item--mark-right');
                 
             }
             
             setTimeout(() => {
-                let str = $next[0].className;
-                let arr = str.split("-");
-                let numSub = arr[arr.length - 1];
                 topPositions();
-                addSubLines($next[0], numSub);
+                //addSubLines($next[0], numSub);
+                addSubLines();
             }, 500);
+            
+            
+            if (!e.data.multiple) {
+            
+               $this.parent().parent().find('.uservisible-str__sublist').not($next).slideUp(50).parent().find('.uservisible-str__sublink-block:first').parent().find('.js-mark').removeClass('uservisible-str__item--mark-right').addClass('uservisible-str__item--mark');
+
+               setTimeout(() => {
+                    /*let str = $next[0].className;
+                    let arr = str.split("-");
+                    let numSub = arr[arr.length - 1];*/
+                    topPositions();
+                    addSubLines();
+                }, 500);
+
+            }
             
         } 
         
 
-		if (!e.data.multiple) {
-            
-           $this.parent().parent().find('.uservisible-str__sublist').not($next).slideUp(50).parent().find('.uservisible-str__sublink-block:first').removeClass('uservisible-str__item--mark-right').addClass('uservisible-str__item--mark');
-            
-           setTimeout(() => {
-                /*let str = $next[0].className;
-                let arr = str.split("-");
-                let numSub = arr[arr.length - 1];*/
-                topPositions();
-                addSubLines();
-            }, 500);
-                
-		}
+		
 	}	
 
     var subAccordion = new Subaccordion($('.uservisible-str.adminvisible-str'), false);

@@ -127,18 +127,18 @@
     }
 
     &--mark {
-
+      right: 9px;
       background-image: url(../img/arrow-bottom.png);
       background-repeat: no-repeat;
-      background-position: 96% center;
+      background-position: center;
 
     }
 
     &--mark-right {
-
+      right: 9px;
       background-image: url(../img/arrow-sub.png);
       background-repeat: no-repeat;
-      background-position: 96% center;
+      background-position: center;
 
     }
 

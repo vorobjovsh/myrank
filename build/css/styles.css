@@ -865,15 +865,31 @@ p{
 }
 
 .uservisible-str__item--mark {
+	background-position: center;
+	display: block;
+	width: 20px;
+	height: 9px;
+	position: absolute;
+	z-index: 200;
+	right: 12px;
+	top: calc(50% - 5px);
 	background-image: url(../img/arrow-bottom.png);
 	background-repeat: no-repeat;
-	background-position: 219px center;
+	cursor: pointer;
 }
 
 .uservisible-str__item--mark-right {
+	background-position: center;
+	display: block;
+	width: 10px;
+	height: 21px;
+	position: absolute;
+	z-index: 200;
+	right: 12px;
+	top: calc(50% - 11px);
 	background-image: url(../img/arrow-sub.png);
 	background-repeat: no-repeat;
-	background-position: 227px center;
+	cursor: pointer;
 }
 
 .uservisible-str__item--addmain {
@@ -919,6 +935,7 @@ p{
 	display: flex;
 	flex-direction: column;
 	padding: 12px 36px 12px 10px;
+	position: relative;
 }
 
 .uservisible-str__link {
@@ -970,6 +987,7 @@ p{
 	display: flex;
 	flex-direction: column;
 	padding: 12px 36px 12px 10px;
+	position: relative;
 }
 
 .uservisible-str__sublink {
@@ -1861,15 +1879,17 @@ p{
 }
 
 .uservisible-str__item--mark {
+	right: 9px;
 	background-image: url(../img/arrow-bottom.png);
 	background-repeat: no-repeat;
-	background-position: 96% center;
+	background-position: center;
 }
 
 .uservisible-str__item--mark-right {
+	right: 9px;
 	background-image: url(../img/arrow-sub.png);
 	background-repeat: no-repeat;
-	background-position: 96% center;
+	background-position: center;
 }
 
 .uservisible-str__item:hover {
@@ -2738,13 +2758,13 @@ p{
 .uservisible-str__item--mark {
 	background-image: url(../img/arrow-bottom.png);
 	background-repeat: no-repeat;
-	background-position: 96% center;
+	background-position: center;
 }
 
 .uservisible-str__item--mark-right {
 	background-image: url(../img/arrow-sub.png);
 	background-repeat: no-repeat;
-	background-position: 96% center;
+	background-position: center;
 }
 
 .uservisible-str__item:hover {
@@ -3611,15 +3631,17 @@ p{
 }
 
 .uservisible-str__item--mark {
+	right: 9px;
 	background-image: url(../img/arrow-bottom.png);
 	background-repeat: no-repeat;
-	background-position: 96% center;
+	background-position: center;
 }
 
 .uservisible-str__item--mark-right {
+	right: 9px;
 	background-image: url(../img/arrow-sub.png);
 	background-repeat: no-repeat;
-	background-position: 96% center;
+	background-position: center;
 }
 
 .uservisible-str__item:hover {
