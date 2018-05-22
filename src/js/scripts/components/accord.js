@@ -16,7 +16,6 @@ $(function() {
 		var $el = e.data.el,
 			$this = $(this),
 			$next = $this.next();
-        console.log(e.target);
           
         if($this.parent().find('.uservisible-str__sublist').length > 0 && e.target.classList.contains('js-mark')) {
             
