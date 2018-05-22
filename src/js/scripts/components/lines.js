@@ -1,62 +1,107 @@
-const divisionBlock = document.querySelector(".subdivision-str__content");
-
 const jsMenu = document.querySelector(".uservisible-str.adminvisible-str");
+const jsMenuUser = document.querySelector(".uservisible-str.js-uservisible-str");
+
+const divisionBlock = jsMenu.parentNode;
+const divisionBlockUser = jsMenuUser.parentNode;
 
 let lastDivisionBlock = jsMenu.lastElementChild;
+let lastDivisionBlockUser = jsMenuUser.lastElementChild;
 
-//let lineTop = divisionBlock.getBoundingClientRect().top;
-    
+const arrSublist = document.querySelectorAll(".adminvisible-str .uservisible-str__sublist");
 
-//let $lineBottom = $(lastDivisionBlock).offset().top;
+arrSublist.forEach(function(item, i) {
+  item.classList.add(`js-sublist-${i}`);
+});
 
-//let $lineBottomCorrect = $lineBottom - 23;
+console.log(arrSublist);
 
-
-/*$(document).ready(function(){
-	  
-    
-
-    
-    
-});*/
-
-    
+const arrSublistUser = document.querySelectorAll(".js-uservisible-str .uservisible-str__sublist");
+   
 function topPositions() {
-        
-    let $lineTop = $(divisionBlock).offset().top;
-    
-    let $lineBottom = $(lastDivisionBlock).offset().top;
-    
-    let $lineBottomCorrect = $lineBottom + 23;
-    
-    let $heightLine = $lineBottomCorrect - $lineTop;
-    
-    
-    
-    /*$('.uservisible-str.adminvisible-str::before').css({
-        height: '300px'
-    });*/
-    
-    
-    //console.log(document.body.scrollTop);
-    
+    let lineTop;
+    let lineBottom;
+    let lineBottomCorrect;
+    let heightLine;
     let style = document.createElement('style');
-    style.innerHTML = '.uservisible-str.adminvisible-str::before {height: ' + $heightLine + 'px;}';
-    document.querySelector('head').appendChild(style);
     
-    console.log(getComputedStyle(jsMenu, ":before").height);    
+    if(maket7.classList.contains("js-block")) {
+       
+        lineTop = getCoords(divisionBlock).top;
+    
+        lineBottom = getCoords(lastDivisionBlock).top;
+
+        lineBottomCorrect = lineBottom + 24;
+
+        heightLine = lineBottomCorrect - lineTop;
+
+        style.innerHTML = '.uservisible-str.adminvisible-str::before {height: ' + heightLine + 'px;}';
+
+        document.querySelector('head').appendChild(style);
+        
+    }
+    
+    if(maket8.classList.contains("js-block")) {
+       
+        lineTop = getCoords(divisionBlockUser).top;
+    
+        lineBottom = getCoords(lastDivisionBlockUser).top;
+
+        lineBottomCorrect = lineBottom + 26;
+
+        heightLine = lineBottomCorrect - lineTop;
+
+        style.innerHTML = '.uservisible-str.js-uservisible-str::before {height: ' + heightLine + 'px;}';
+
+        document.querySelector('head').appendChild(style);
+        
+    }
+    
+    //console.log(lineTop);
+    //console.log(lineBottom);
+    //console.log(getComputedStyle(jsMenuUser, ":before").height);    
 }
     
     
-   
-    /*let lineTop = divisionBlock.getBoundingClientRect().top;
-    
-    let lineBottom = lastDivisionBlock.getBoundingClientRect().top;
-    
-    console.log(lineTop);*/
-    
-    
-    
+    function getCoords(elem) { // кроме IE8-
+        
+      var box = elem.getBoundingClientRect();
 
+      return {
+        top: box.top + pageYOffset,
+        left: box.left + pageXOffset
+      };
 
+    }
+
+function addSubLines() {
+    
+    let wicon = $(window).width();
+    
+    arrSublist.forEach(function(item, i) {
+      
+    let lineTopSub = getCoords(item).top;
+    let lineTopSubCorrect = lineTopSub - 6;
+    if(wicon > 767) {
+       lineTopSubCorrect = lineTopSub;
+    }
+    let lineBottomEl = item.lastElementChild;
+
+    let lineBottomSub = getCoords(lineBottomEl).top;
+    let lineBottomSubCorrect = lineBottomSub + 24;
+    if(wicon > 767) {
+       lineBottomSubCorrect = lineBottomSub - 1;
+    }
+
+    let heightLineSub = lineBottomSubCorrect - lineTopSubCorrect;
+
+    let style = document.createElement('style');
+            
+    style.innerHTML = '.uservisible-str__sublist.js-sublist-' + i + '::before {height: ' + heightLineSub + 'px;}';
+    console.log(style);
+
+    document.querySelector('head').appendChild(style); 
+        
+    });
+         
+}
 

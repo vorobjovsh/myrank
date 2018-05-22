@@ -32,6 +32,7 @@ function addToAdmin(evt) {
   maket2.classList.remove("js-block");
   maket7.classList.add("js-block");
   topPositions();  
+  
 }
 
 // Переходим в панель User
