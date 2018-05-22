@@ -10,23 +10,32 @@ function zoomIconsBlock(event) {
     let iconPopup;
     //console.log(elem.parentNode.parentNode);
 
-    if(elem.classList.contains("uservisible-str--bottomflex") && wicon < 1024) {
-       iconPopup = elem;
-       iconPopup.classList.add("js-uservisible-str--zoomicons");
-       addZoomIcons = document.querySelector(".js-uservisible-str--zoomicons");
+    if(wicon < 1024) {
+       
+        if(elem.classList.contains("uservisible-str--bottomflex")) {
+            
+           iconPopup = elem;
+           iconPopup.classList.add("js-uservisible-str--zoomicons");
+           addZoomIcons = document.querySelector(".js-uservisible-str--zoomicons");
 
-       addZoomIcons.addEventListener("click", addZoomContact);
+           addZoomIcons.addEventListener("click", addZoomContact);
 
-       //console.log('btnTrashArr');
-
-    } else if(elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex") && wicon < 1024) {
-       iconPopup = elem.parentNode.parentNode;
-       iconPopup.classList.add("js-uservisible-str--zoomicons");
-       addZoomIcons = document.querySelector(".js-uservisible-str--zoomicons");
-       //btnTrashArr.removeEventListener("click", zoomIconsBlock);
-       addZoomIcons.addEventListener("click", addZoomContact);
-
-       //console.log('btnTrashArrParent');
+        } else if(elem.parentNode.parentNode.classList.contains("uservisible-str--bottomflex")) {
+            
+           iconPopup = elem.parentNode.parentNode;
+           iconPopup.classList.add("js-uservisible-str--zoomicons");
+           addZoomIcons = document.querySelector(".js-uservisible-str--zoomicons");
+           addZoomIcons.addEventListener("click", addZoomContact);
+            
+        } else if(elem.parentNode.parentNode.parentNode.classList.contains("uservisible-str--bottomflex")) {
+               
+           iconPopup = elem.parentNode.parentNode.parentNode;
+           iconPopup.classList.add("js-uservisible-str--zoomicons");
+           addZoomIcons = document.querySelector(".js-uservisible-str--zoomicons");
+           addZoomIcons.addEventListener("click", addZoomContact);      
+                  
+        }
+        
     }
 
 }
@@ -37,7 +46,7 @@ function addZoomContact(event) {
     btnTrashArr.removeEventListener("click", zoomIconsBlock);
       if(addZoomIcons.classList.contains("js-uservisible-str--zoomicons")) {
 
-          if(elem.classList.contains("uservisible-str__sublink--imgcall")) {
+          if(elem.classList.contains("uservisible-str__sublink--imgcall") || elem.matches(".uservisible-str__sublink--imgcall > use")) {
 
            addZoomIcons.classList.remove("js-uservisible-str--zoomicons");
            //console.log('Contact');
@@ -50,7 +59,7 @@ function addZoomContact(event) {
 
           }
 
-          if(elem.classList.contains("uservisible-str__sublink--imgman")) {
+          if(elem.classList.contains("uservisible-str__sublink--imgman") || elem.matches(".uservisible-str__sublink--imgman > use")) {
 
            addZoomIcons.classList.remove("js-uservisible-str--zoomicons");
            //console.log('Employ');

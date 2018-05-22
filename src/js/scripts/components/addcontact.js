@@ -5,7 +5,13 @@ function addContact(event) {
     let wicon = $(window).width();
     //console.log(elem);
     if(elem.classList.contains("uservisible-str__sublink--imgcall") && wicon > 1023) {
-    console.log(wicon);
+    //console.log(wicon);
+        
+       $("#myModal-addcontact-7").modal("show");
+    }
+    
+    if(elem.matches(".uservisible-str__sublink--imgcall > use") && wicon > 1023) {
+        
        $("#myModal-addcontact-7").modal("show");
     }
 
