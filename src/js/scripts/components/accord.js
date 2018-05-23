@@ -16,6 +16,8 @@ $(function() {
 		var $el = e.data.el,
 			$this = $(this),
 			$next = $this.next();
+        
+        let wicon = $(window).width();
           
         if($this.parent().find('.uservisible-str__sublist').length > 0 && e.target.classList.contains('js-mark')) {
             
@@ -52,6 +54,11 @@ $(function() {
 
             }
             
+            if(wicon > 767) {
+                //console.log($next);
+               paramElem($next[0]);
+            }
+            
         } 
    
 		
@@ -81,6 +88,8 @@ $(function() {
 		var $el = e.data.el,
 			$this = $(this),
 			$next = $this.next();
+        
+        let wicon = $(window).width();
 
 		if($this.parent().find('.uservisible-str__sublist').length > 0  && e.target.classList.contains('js-mark')) {
            
@@ -117,6 +126,10 @@ $(function() {
                     addSubLines();
                 }, 500);
 
+            }
+            
+            if(wicon > 767) {
+               paramElem($next[0]);
             }
             
         } 

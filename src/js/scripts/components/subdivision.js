@@ -24,6 +24,7 @@ function addToUser(evt) {
   $("#myModal-option-2").modal("hide");
   maket2.classList.remove("js-block");
   maket8.classList.add("js-block");
+  scrollNone(jsMenuUser);  
 }
 
 function addToAdmin(evt) {
@@ -32,7 +33,7 @@ function addToAdmin(evt) {
   maket2.classList.remove("js-block");
   maket7.classList.add("js-block");
   topPositions();  
-  
+  scrollNone(jsMenu);
 }
 
 // Переходим в панель User

@@ -11,3 +11,4 @@
 //= scripts/components/addusers.js
 //= scripts/components/accord.js
 //= scripts/components/lines.js
+//= scripts/components/scrolly.js
