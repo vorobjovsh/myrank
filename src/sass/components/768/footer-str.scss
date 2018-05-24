@@ -7,7 +7,7 @@
   }
 
   .footer-str__applicat {
-    width: 290px;
+    width: 346px;
     border-right: none;
     padding-right: 0;
     padding-top: 20px;
@@ -15,7 +15,7 @@
   }
 
   .footer-str__applicatnew {
-    width: 290px;
+    width: 346px;
     order: 0;
     border-bottom: 1px solid #dcdcdc;
     padding-bottom: 20px;
@@ -24,7 +24,7 @@
   .footer-str__name {
     margin-bottom: 0;
     line-height: 1.1;
-    width: 122px;
+    width: 140px;
   }
 
   .footer-str__itemblock {
@@ -75,6 +75,13 @@
       height: 33px;
       width: 111px;
   }
+
+  // Новые заявки
+  .footer-str__applicatnew .footer-str__itemblock {
+    flex-basis: 346px;
+  }
+
+
 
   .footer-str__btn {
      flex-basis: 80px;

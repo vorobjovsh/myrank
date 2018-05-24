@@ -245,4 +245,47 @@
 
 }
 
+.footer-str__formblock {
+
+    &--title {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      color: #333;
+    }
+
+}
+
+.footer-str__form {
+
+    &--title {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #333;
+    }
+
+    &--notnecessary {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: #777;
+    }
+
+    &--text {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+}
+
+.select1 {
+      ont-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+}
+
 

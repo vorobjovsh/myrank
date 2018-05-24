@@ -35,6 +35,82 @@
 
   }
 
+  // Стили формы
+
+  .footer-str__itemblock {
+    flex-basis: 346px;
+  }
+
+  .footer-str__itemappl {
+    flex-basis: 346px;
+  }
+
+  .footer-str__name {
+    width: 140px;
+  }
+
+// Новые заявки
+  .footer-str__applicatnew .footer-str__itemblock {
+    flex-basis: 329px;
+  }
+
+  .footer-str__applicatnew .footer-str__itemappl {
+    flex-basis: 100%;
+  }
+
+  .footer-str__applicatnew .footer-str__name {
+    width: 124px;
+  }
+
+  .footer-str__form {
+
+    padding-bottom: 15px;
+
+    &--title {
+        margin-bottom: 6px;
+    }
+
+    &--input {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    &--titleblock {
+        @include flex-between;
+        margin-bottom: 5px;
+    }
+
+    &--notnecessary {
+
+    }
+
+    &--select {
+        width: 100%;
+        height: 40px !important;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    &--text {
+        margin-top: 10px;
+    }
+
+    &--addbtn {
+        margin: auto;
+    }
+
+}
+
+  .select1  {
+	width: 324px !important;
+	//height: 40px;
+    height: auto;
+	background-position: 96% center;
+	line-height:35px;
+}
+
 
 
 }

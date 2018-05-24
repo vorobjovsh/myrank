@@ -63,10 +63,19 @@
     @include flex-between;
     margin-bottom: 8px;
     align-items: center;
+    padding: 4px 4px 0;
   }
 
   .footer-str__itemleft {
     align-items: center;
+  }
+
+  .footer-str__photo {
+    margin-right: 5px;
+  }
+
+  .footer-str__name {
+    width: 116px;
   }
 
   .footer-str__itemright {
@@ -74,6 +83,19 @@
       display: flex;
       height: 33px;
       width: 111px;
+  }
+
+  // Новые заявки
+  .footer-str__applicatnew .footer-str__itemblock {
+    flex-basis: 100%;
+  }
+
+  .footer-str__applicatnew .footer-str__itemappl {
+    flex-basis: 100%;
+  }
+
+  .footer-str__applicatnew .footer-str__name {
+    width: 116px;
   }
 
   .footer-str__btn {
@@ -140,6 +162,22 @@
     border-radius: 18px;
   }*/
 
+  }
+
+  .footer-str__form {
+
+    &--text {
+        text-align: center;
+    }
+
+  }
+
+  .select1  {
+      width: 280px !important;
+      //height: 40px;
+      height: auto;
+      background-position: 96% center;
+      line-height:35px;
   }
 
 }
