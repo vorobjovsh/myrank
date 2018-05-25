@@ -18,18 +18,18 @@ const arrSublistUser = document.querySelectorAll(".js-uservisible-str .uservisib
 arrSublistUser.forEach(function(item, i) {
   item.classList.add(`js-sublistuser-${i}`);
 });
-   
+
 function topPositions() {
     let lineTop;
     let lineBottom;
     let lineBottomCorrect;
     let heightLine;
     let style = document.createElement('style');
-    
+
     if(maket7.classList.contains("js-block")) {
-       
+
         lineTop = getCoords(divisionBlock).top;
-    
+
         lineBottom = getCoords(lastDivisionBlock).top;
 
         lineBottomCorrect = lineBottom + 24;
@@ -39,13 +39,13 @@ function topPositions() {
         style.innerHTML = '.uservisible-str.adminvisible-str::before {height: ' + heightLine + 'px;}';
 
         document.querySelector('head').appendChild(style);
-        
+
     }
-    
+
     if(maket8.classList.contains("js-block")) {
-       
+
         lineTop = getCoords(divisionBlockUser).top;
-    
+
         lineBottom = getCoords(lastDivisionBlockUser).top;
 
         lineBottomCorrect = lineBottom + 26;
@@ -55,14 +55,14 @@ function topPositions() {
         style.innerHTML = '.uservisible-str.js-uservisible-str::before {height: ' + heightLine + 'px;}';
 
         document.querySelector('head').appendChild(style);
-        
+
     }
-        
+
 }
-    
-    
+
+
     function getCoords(elem) { // кроме IE8-
-        
+
       var box = elem.getBoundingClientRect();
 
       return {
@@ -73,13 +73,13 @@ function topPositions() {
     }
 
 function addSubLines() {
-    
+
     let wicon = $(window).width();
-    
+
     if(maket7.classList.contains("js-block")) {
-        
+
     arrSublist.forEach(function(item, i) {
-      
+
     let lineTopSub = getCoords(item).top;
     let lineTopSubCorrect = lineTopSub - 6;
     if(wicon > 767) {
@@ -96,21 +96,21 @@ function addSubLines() {
     let heightLineSub = lineBottomSubCorrect - lineTopSubCorrect;
 
     let style = document.createElement('style');
-            
-    style.innerHTML = '.uservisible-str__sublist.js-sublist-' + i + '::before {height: ' + heightLineSub + 'px;}';
-    
 
-    document.querySelector('head').appendChild(style); 
-        
+    style.innerHTML = '.uservisible-str__sublist.js-sublist-' + i + '::before {height: ' + heightLineSub + 'px;}';
+
+
+    document.querySelector('head').appendChild(style);
+
     });
-        
+
     }
-    
-    
+
+
     if(maket8.classList.contains("js-block")) {
-        
+
     arrSublistUser.forEach(function(item, i) {
-      
+
     let lineTopSub = getCoords(item).top;
     let lineTopSubCorrect = lineTopSub - 6;
     if(wicon > 767) {
@@ -127,15 +127,15 @@ function addSubLines() {
     let heightLineSub = lineBottomSubCorrect - lineTopSubCorrect;
 
     let style = document.createElement('style');
-            
-    style.innerHTML = '.uservisible-str__sublist.js-sublistuser-' + i + '::before {height: ' + heightLineSub + 'px;}';
-    
 
-    document.querySelector('head').appendChild(style); 
-        
+    style.innerHTML = '.uservisible-str__sublist.js-sublistuser-' + i + '::before {height: ' + heightLineSub + 'px;}';
+
+
+    document.querySelector('head').appendChild(style);
+
     });
-        
+
     }
-         
+
 }
 

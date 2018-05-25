@@ -1,3 +1,4 @@
+//= scripts/polifill/foreach.js
 //= scripts/components/create.js
 //= scripts/components/subdivision.js
 //= scripts/components/trashadmin.js

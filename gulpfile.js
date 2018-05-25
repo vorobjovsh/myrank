@@ -90,6 +90,33 @@ gulp.task("css", () => {
   );
 });
 
+// Создаем таск для сборки css файлов для IE
+gulp.task("css-ie", () => {
+  // Берем только файл ie.scss в папке src/sass/ie
+  return (
+    gulp
+      .src("./src/sass/ie/ie.scss")
+      .pipe(plumber())
+      // Проверяем качество кода с помощью stylelint
+      .pipe(
+        stylelint({
+          reporters: [{ formatter: "string", console: true }]
+        })
+      )
+      // Преобразовываем sass в css
+      .pipe(sass())
+      // Создаем вендорные префиксы
+      .pipe(postcss([autoprefixer()]))
+      // Группируем медиа правила
+      .pipe(mmq({ log: false }))
+      // Выкидываем css в папку build
+      .pipe(gulp.dest("./build/css"))
+      // Говорим browser-sync о том что пора перезагрузить барузер так как файл изменился
+      .pipe(server.stream())
+  );
+});
+
+
 // Создаем таск для сборки css файлов (в продакшен)
 gulp.task("css-prod", () => {
   // Берем только файл styles.scss в папке src, в который все импортируется
@@ -116,6 +143,30 @@ gulp.task("css-prod", () => {
       // Переименовываем добавляя .min
       .pipe(rename("styles.min.css"))
       // Выкидываем минифицированный css в папку public
+      .pipe(gulp.dest("./public/css"))
+  );
+});
+
+// Создаем таск для сборки css файлов для IE (в продакшен)
+gulp.task("css-ie-prod", () => {
+  // Берем только файл ie.scss в папке src/sass/ie
+  return (
+    gulp
+      .src("./src/sass/ie/ie.scss")
+      .pipe(plumber())
+      // Проверяем качество кода с помощью stylelint
+      .pipe(
+        stylelint({
+          reporters: [{ formatter: "string", console: true }]
+        })
+      )
+      // Преобразовываем sass в css
+      .pipe(sass())
+      // Создаем вендорные префиксы
+      .pipe(postcss([autoprefixer()]))
+      // Группируем медиа правила
+      .pipe(mmq({ log: false }))
+      // Выкидываем css в папку public
       .pipe(gulp.dest("./public/css"))
   );
 });
@@ -259,6 +310,8 @@ gulp.task("watch", () => {
   gulp.watch("./src/**/*.html", ["html"]);
   // Следим за изменениями в любом sass файле и вызываем таск 'css' на каждом изменении
   gulp.watch("./src/sass/**/*.scss", ["css"]);
+  // Следим за изменениями в любом sass файле и вызываем таск 'css' на каждом изменении
+  gulp.watch("./src/sass/ie/*.scss", ["css-ie"]);
   // Следим за изменениями в любом js файле и вызываем таск 'js' на каждом изменении
   gulp.watch("./src/js/**/*.js", ["js"]);
   // Следим за изменениями картинок и вызываем таск 'img' на каждом изменении
@@ -302,6 +355,7 @@ gulp.task("build", function(done) {
     "images",
     "fonts",
     "css",
+    "css-ie",
     "html",
     "js-build-libs",
     "js",
@@ -318,6 +372,7 @@ gulp.task("public", function(done) {
     "del:public",
     "images-prod",
     "css-prod",
+    "css-ie-prod",
     "html-prod",
     "js-public-libs",
     "js-prod",

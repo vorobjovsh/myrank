@@ -3,6 +3,17 @@ const maket1 = document.querySelector(".maket-1");
 const maket2 = document.querySelector(".maket-2");
 const createStr = document.querySelector(".button-maket-1");
 
+const ulTopBottom = {
+    top: '',
+    bottom: '',
+    height: '',
+    topUl: '',
+    bottomUl: '',
+    heightUl: '',
+    difference: '',
+    ulSelect: ''
+};
+
 function addCompany(evt) {
   evt.preventDefault();
   maket1.classList.add("js-none");

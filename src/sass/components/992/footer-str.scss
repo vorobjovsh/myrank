@@ -1,7 +1,7 @@
 @media (max-width: 992px){
 
   .footer-str {
-    padding: 20px 15px 0;
+    padding: 20px 15px 0 0;
     border-bottom: none;
     @include flex-between;
     flex-direction: row;
@@ -15,6 +15,14 @@
     padding-top: 0;
     order: 0;
     box-sizing: border-box;
+  }
+
+  .footer-str__appltitle {
+    padding-left: 15px;
+  }
+
+  .footer-str__newtitle {
+    padding-left: 30px;
   }
 
   .footer-str__applicatnew {
@@ -39,6 +47,18 @@
 
   .footer-str__itemblock {
     flex-basis: 346px;
+
+    &::before {
+    display: block;
+    content: "\00B7";
+    margin-right: 0;
+    position: absolute;
+    top: 14px;
+    left: -8px;
+    font-size: 26px;
+    color: #ff7200;
+  }
+
   }
 
   .footer-str__itemappl {

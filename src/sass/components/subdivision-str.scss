@@ -1,6 +1,8 @@
 .subdivision-str {
   border-bottom: 1px solid #dcdcdc;
-  @include flex-between;
+  //@include flex-between;
+  -js-display: flex;
+   display: flex;
   flex-wrap: wrap;
 }
 
@@ -23,7 +25,7 @@
 }
 
 .subdivision-str__content {
-  flex-basis: 80%;
+  flex-basis: 78%;
   padding: 15px 10px 0;
 
   &--admin {
