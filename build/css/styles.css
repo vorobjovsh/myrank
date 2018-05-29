@@ -1375,6 +1375,7 @@ p{
 
 .footer-str__searchlink:hover {
 	text-decoration: none;
+	border-bottom: none;
 }
 
 .footer-str__formblock {
