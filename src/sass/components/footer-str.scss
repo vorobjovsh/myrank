@@ -137,9 +137,21 @@
 
 .footer-str__btn {
    display: block;
-   padding: 0 13px;
+   padding: 0 12px;
    background-color: #57955d;
    border-radius: none !important;
+   border: 1px solid #57955d;
+
+  &:hover {
+    background-color: #fff;
+    color: #57955d;
+  }
+
+  &--hover {
+    background-color: #fff;
+    color: #57955d;
+  }
+
 }
 
 .footer-str__trash {
