@@ -248,14 +248,32 @@
     }
 
     &--selectbox {
+      position: relative;
       margin-bottom: 20px;
+      width: 100%;
+      height: 40px !important;
+      padding: 0 10px;
+      box-sizing: border-box;
+      color:#226377;
+      text-align:left;
+      background-image: url(../img/arrow-bottom.png);
+      background-repeat: no-repeat;
+      background-position: 96% center;
+      line-height:35px;
+      white-space: nowrap;
+      padding-right: 22px; /* отступ справа с учетом стрелочки */
+      padding-left: 10px;
+      border: 1px solid #dcdcdc;
+      zoom:1; /* для IE6 */
+      //margin:3px 0 5px 0;
+      cursor: pointer;
     }
 
     &--select {
-        width: 100%;
+        /*width: 100%;
         height: 40px !important;
-        padding: 0 10px;
-        box-sizing: border-box;
+        box-sizing: border-box;*/
+        //width: 324px !important;
     }
 
     &--text {
@@ -278,4 +296,112 @@
 
     }*/
 
+}
+
+
+.sel__placeholder {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #226377;
+  text-align: left;
+  pointer-events: none;
+  user-select: none;
+  visibility: visible;
+  padding-bottom: 10px;
+}
+
+.sel.active .sel__placeholder {
+  visibility: hidden;
+}
+
+.sel__placeholder::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10px;
+  content: attr(data-placeholder);
+  visibility: hidden;
+}
+
+.sel.active .sel__placeholder::before {
+  visibility: visible;
+}
+
+.sel__box {
+  position: absolute;
+  top: 38px;
+  left: -1px;
+  display: none;
+  list-style-type: none;
+  text-align: left;
+  font-size: 16px;
+  background-color: #FFF;
+  width: calc(100% + 2px);
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  z-index: 7;
+}
+
+.sel.active .sel__box {
+  display: block;
+}
+
+.sel__box__options {
+  display: list-item;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #226377;
+  padding: 0 10px;
+  //margin: 0 10px;
+  user-select: none;
+  border-bottom: 1px solid #dcdcdc;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: #eef6ff;
+  }
+
+}
+
+.sel__box__options::after {
+  /*content: '\f00c';
+  font-family: 'FontAwesome';
+  font-size: 0.5em;
+  margin-left: 5px;
+  display: none;*/
+}
+
+.sel__box__options.selected::after {
+  display: inline;
+}
+
+.sel__box__options:hover {
+  background-color: #eef6ff;
+  color: #226377;
+}
+
+.select1  {
+	width: 324px !important;
+	//height: 40px;
+    height: auto;
+	color:#226377;
+	//font:12px Arial, Tahoma, Helvetica, Verdana;
+	text-align:left;
+    background-image: url(../img/arrow-bottom.png);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+	line-height:35px;
+	white-space: nowrap;
+	padding-right: 22px; /* отступ справа с учетом стрелочки */
+    padding-left: 10px;
+	border: 1px solid #dcdcdc;
+	zoom:1; /* для IE6 */
+	//margin:3px 0 5px 0;
+    cursor: pointer;
 }

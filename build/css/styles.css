@@ -135,23 +135,6 @@ p{
 	background-color: rgba(219, 219, 219, 0.6) !important;
 }
 
-.select1 {
-	width: 324px !important;
-	height: auto;
-	color: #226377;
-	text-align: left;
-	background-image: url(../img/arrow-bottom.png);
-	background-repeat: no-repeat;
-	background-position: 96% center;
-	line-height: 35px;
-	white-space: nowrap;
-	padding-right: 22px; /* отступ справа с учетом стрелочки */
-	padding-left: 10px;
-	border: 1px solid #dcdcdc;
-	zoom: 1; /* для IE6 */
-	cursor: pointer;
-}
-
 /*body {
     font-family: 'PT Sans', sans-serif;
     font-size: rem(14px);
@@ -404,9 +387,20 @@ p{
 }
 
 .select1 {
-	ont-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
+}
+
+.select1 option {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #226377;
+}
+
+.select1 option:hover {
+	color: #226377;
 }
 
 .header-str {
@@ -1432,18 +1426,140 @@ p{
 }
 
 .footer-str__form--selectbox {
+	position: relative;
 	margin-bottom: 20px;
-}
-
-.footer-str__form--select {
 	width: 100%;
 	height: 40px !important;
 	padding: 0 10px;
 	box-sizing: border-box;
+	color: #226377;
+	text-align: left;
+	background-image: url(../img/arrow-bottom.png);
+	background-repeat: no-repeat;
+	background-position: 96% center;
+	line-height: 35px;
+	white-space: nowrap;
+	padding-right: 22px; /* отступ справа с учетом стрелочки */
+	padding-left: 10px;
+	border: 1px solid #dcdcdc;
+	zoom: 1; /* для IE6 */
+	cursor: pointer;
+}
+
+.footer-str__form--select { /*width: 100%;
+        height: 40px !important;
+        box-sizing: border-box;*/
 }
 
 .footer-str__form--addbtn {
 	margin: auto;
+}
+
+.sel__placeholder {
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #226377;
+	text-align: left;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	visibility: visible;
+	padding-bottom: 10px;
+}
+
+.sel.active .sel__placeholder {
+	visibility: hidden;
+}
+
+.sel__placeholder::before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-left: 10px;
+	content: attr(data-placeholder);
+	visibility: hidden;
+}
+
+.sel.active .sel__placeholder::before {
+	visibility: visible;
+}
+
+.sel__box {
+	position: absolute;
+	top: 38px;
+	left: -1px;
+	display: none;
+	list-style-type: none;
+	text-align: left;
+	font-size: 16px;
+	background-color: #FFF;
+	width: calc(100% + 2px);
+	box-sizing: border-box;
+	border: 1px solid #dcdcdc;
+	z-index: 7;
+}
+
+.sel.active .sel__box {
+	display: block;
+}
+
+.sel__box__options {
+	display: list-item;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #226377;
+	padding: 0 10px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.sel__box__options:last-of-type {
+	border-bottom: none;
+}
+
+.sel__box__options:hover {
+	background-color: #eef6ff;
+}
+
+.sel__box__options::after { /*content: '\f00c';
+  font-family: 'FontAwesome';
+  font-size: 0.5em;
+  margin-left: 5px;
+  display: none;*/
+}
+
+.sel__box__options.selected::after {
+	display: inline;
+}
+
+.sel__box__options:hover {
+	background-color: #eef6ff;
+	color: #226377;
+}
+
+.select1 {
+	width: 324px !important;
+	height: auto;
+	color: #226377;
+	text-align: left;
+	background-image: url(../img/arrow-bottom.png);
+	background-repeat: no-repeat;
+	background-position: 96% center;
+	line-height: 35px;
+	white-space: nowrap;
+	padding-right: 22px; /* отступ справа с учетом стрелочки */
+	padding-left: 10px;
+	border: 1px solid #dcdcdc;
+	zoom: 1; /* для IE6 */
+	cursor: pointer;
 }
 
 .button-str {

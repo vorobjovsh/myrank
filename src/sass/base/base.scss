@@ -115,22 +115,4 @@ p{
    background-color: hsla(0, 0%, 86%, 0.6) !important;
 }
 
-.select1  {
-	width: 324px !important;
-	//height: 40px;
-    height: auto;
-	color:#226377;
-	//font:12px Arial, Tahoma, Helvetica, Verdana;
-	text-align:left;
-    background-image: url(../img/arrow-bottom.png);
-    background-repeat: no-repeat;
-    background-position: 96% center;
-	line-height:35px;
-	white-space: nowrap;
-	padding-right: 22px; /* отступ справа с учетом стрелочки */
-    padding-left: 10px;
-	border: 1px solid #dcdcdc;
-	zoom:1; /* для IE6 */
-	//margin:3px 0 5px 0;
-    cursor: pointer;
-}
+
