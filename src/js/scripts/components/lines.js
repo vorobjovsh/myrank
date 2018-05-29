@@ -9,15 +9,23 @@ let lastDivisionBlockUser = jsMenuUser.lastElementChild;
 
 const arrSublist = document.querySelectorAll(".adminvisible-str .uservisible-str__sublist");
 
-arrSublist.forEach(function(item, i) {
+/*arrSublist.forEach(function(item, i) {
   item.classList.add(`js-sublist-${i}`);
-});
+});*/
+
+for (var i = 0; i < arrSublist.length; i++) {
+   arrSublist[i].classList.add(`js-sublist-${i}`);
+}
 
 const arrSublistUser = document.querySelectorAll(".js-uservisible-str .uservisible-str__sublist");
 
-arrSublistUser.forEach(function(item, i) {
+/*arrSublistUser.forEach(function(item, i) {
   item.classList.add(`js-sublistuser-${i}`);
-});
+});*/
+
+for (var i = 0; i < arrSublistUser.length; i++) {
+   arrSublistUser[i].classList.add(`js-sublistuser-${i}`);
+}
 
 function topPositions() {
     let lineTop;
@@ -78,7 +86,7 @@ function addSubLines() {
 
     if(maket7.classList.contains("js-block")) {
 
-    arrSublist.forEach(function(item, i) {
+    /*arrSublist.forEach(function(item, i) {
 
     let lineTopSub = getCoords(item).top;
     let lineTopSubCorrect = lineTopSub - 6;
@@ -102,14 +110,40 @@ function addSubLines() {
 
     document.querySelector('head').appendChild(style);
 
-    });
+    });*/
+
+    for (var i = 0; i < arrSublist.length; i++) {
+
+      let lineTopSub = getCoords(arrSublist[i]).top;
+      let lineTopSubCorrect = lineTopSub - 6;
+      if(wicon > 767) {
+         lineTopSubCorrect = lineTopSub;
+      }
+      let lineBottomEl = arrSublist[i].lastElementChild;
+
+      let lineBottomSub = getCoords(lineBottomEl).top;
+      let lineBottomSubCorrect = lineBottomSub + 24;
+      if(wicon > 767) {
+         lineBottomSubCorrect = lineBottomSub - 1;
+      }
+
+      let heightLineSub = lineBottomSubCorrect - lineTopSubCorrect;
+
+      let style = document.createElement('style');
+
+      style.innerHTML = '.uservisible-str__sublist.js-sublist-' + i + '::before {height: ' + heightLineSub + 'px;}';
+
+
+      document.querySelector('head').appendChild(style);
+
+    }
 
     }
 
 
     if(maket8.classList.contains("js-block")) {
 
-    arrSublistUser.forEach(function(item, i) {
+    /*arrSublistUser.forEach(function(item, i) {
 
     let lineTopSub = getCoords(item).top;
     let lineTopSubCorrect = lineTopSub - 6;
@@ -133,7 +167,33 @@ function addSubLines() {
 
     document.querySelector('head').appendChild(style);
 
-    });
+    });*/
+
+    for (var i = 0; i < arrSublistUser.length; i++) {
+
+      let lineTopSub = getCoords(arrSublistUser[i]).top;
+      let lineTopSubCorrect = lineTopSub - 6;
+      if(wicon > 767) {
+         lineTopSubCorrect = lineTopSub;
+      }
+      let lineBottomEl = arrSublistUser[i].lastElementChild;
+
+      let lineBottomSub = getCoords(lineBottomEl).top;
+      let lineBottomSubCorrect = lineBottomSub + 26;
+      if(wicon > 767) {
+         lineBottomSubCorrect = lineBottomSub + 1;
+      }
+
+      let heightLineSub = lineBottomSubCorrect - lineTopSubCorrect;
+
+      let style = document.createElement('style');
+
+      style.innerHTML = '.uservisible-str__sublist.js-sublistuser-' + i + '::before {height: ' + heightLineSub + 'px;}';
+
+
+      document.querySelector('head').appendChild(style);
+
+    }
 
     }
 

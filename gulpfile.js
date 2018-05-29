@@ -96,14 +96,6 @@ gulp.task("css-ie", () => {
   return (
     gulp
       .src("./src/sass/ie/ie.scss")
-      .pipe(plumber())
-      // Проверяем качество кода с помощью stylelint
-      .pipe(
-        stylelint({
-          reporters: [{ formatter: "string", console: true }]
-        })
-      )
-      // Преобразовываем sass в css
       .pipe(sass())
       // Создаем вендорные префиксы
       .pipe(postcss([autoprefixer()]))

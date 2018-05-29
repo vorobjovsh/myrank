@@ -22,16 +22,16 @@ addSubdivision.addEventListener("click", addSubdiv);
 function addToUser(evt) {
   evt.preventDefault();
   $("#myModal-option-2").modal("hide");
-  maket2.classList.remove("js-block");
-  maket8.classList.add("js-block");
+  $('.maket-2').removeClass("js-block");
+  $('.maket-8').addClass("js-block");
   scrollNone(jsMenuUser);
 }
 
 function addToAdmin(evt) {
   evt.preventDefault();
   $("#myModal-option-2").modal("hide");
-  maket2.classList.remove("js-block");
-  maket7.classList.add("js-block");
+  $('.maket-2').removeClass("js-block");
+  $('.maket-7').addClass("js-block");
   topPositions();
   scrollNone(jsMenu);
 }
