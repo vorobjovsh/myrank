@@ -86,6 +86,8 @@ function addSubLines() {
 
     if(maket7.classList.contains("js-block")) {
 
+    // Так как в IE forEach не работает, то делаем через for
+
     /*arrSublist.forEach(function(item, i) {
 
     let lineTopSub = getCoords(item).top;
@@ -142,6 +144,8 @@ function addSubLines() {
 
 
     if(maket8.classList.contains("js-block")) {
+
+    // Так как в IE forEach не работает, то делаем через for
 
     /*arrSublistUser.forEach(function(item, i) {
 

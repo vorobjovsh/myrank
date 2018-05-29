@@ -37,20 +37,26 @@ $(function() {
 
             }
 
-            setTimeout(() => {
+            /*setTimeout(() => {
                 topPositions();
                 addSubLines();
-            }, 500);
+            }, 500);*/
+
+            topPositions();
+            addSubLines();
 
 
             if (!e.data.multiple) {
 
                 $el.find('.uservisible-str__sublist').not($next).slideUp(50).parent().find('.uservisible-str__link-block:first').parent().find('.js-mark').removeClass('uservisible-str__item--mark-right').addClass('uservisible-str__item--mark');
 
-                setTimeout(() => {
-                    topPositions();
-                    addSubLines();
-                }, 500);
+            /*setTimeout(() => {
+                topPositions();
+                addSubLines();
+            }, 500);*/
+
+            topPositions();
+            addSubLines();
 
             }
 
@@ -107,24 +113,26 @@ $(function() {
 
             }
 
-            setTimeout(() => {
+            /*setTimeout(() => {
                 topPositions();
-                //addSubLines($next[0], numSub);
                 addSubLines();
-            }, 500);
+            }, 500);*/
+
+            topPositions();
+            addSubLines();
 
 
             if (!e.data.multiple) {
 
                $this.parent().parent().find('.uservisible-str__sublist').not($next).slideUp(50).parent().find('.uservisible-str__sublink-block:first').parent().find('.js-mark').removeClass('uservisible-str__item--mark-right').addClass('uservisible-str__item--mark');
 
-               setTimeout(() => {
-                    /*let str = $next[0].className;
-                    let arr = str.split("-");
-                    let numSub = arr[arr.length - 1];*/
+               /*setTimeout(() => {
                     topPositions();
                     addSubLines();
-                }, 500);
+                }, 500);*/
+
+               topPositions();
+               addSubLines();
 
             }
 
