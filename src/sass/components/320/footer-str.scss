@@ -58,6 +58,10 @@
 
   }
 
+  .footer-str__itemappl-block {
+    flex-basis: 100%;
+  }
+
   .footer-str__itemappl {
     flex-basis: 100%;
     @include flex-between;

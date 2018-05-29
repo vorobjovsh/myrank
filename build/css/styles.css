@@ -1209,6 +1209,7 @@ p{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	position: relative;
 }
 
 .footer-str__block--pl {
@@ -1216,8 +1217,8 @@ p{
 }
 
 .footer-str__itemblock {
-	position: relative;
 	flex-basis: 346px;
+	position: relative;
 }
 
 .footer-str__itemblock::before {
@@ -1225,10 +1226,16 @@ p{
 	content: "\00B7";
 	margin-right: 15px;
 	position: absolute;
-	top: 5px;
+	top: 13px;
 	left: -15px;
 	font-size: 26px;
 	color: #ff7200;
+}
+
+.footer-str__itemappl-block {
+	position: relative;
+	flex-wrap: wrap;
+	flex-basis: 346px;
 }
 
 .footer-str__itemappl {
@@ -1236,14 +1243,17 @@ p{
 	-js-display: flex;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 20px;
-	flex-wrap: wrap;
 	border: 1px solid #fff;
 	padding: 10px 10px 0;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
 }
 
 .footer-str__itemappl--border {
 	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+	position: absolute;
+	z-index: 5;
+	background-color: #fff;
 }
 
 .footer-str__itemleft {
@@ -1381,6 +1391,7 @@ p{
 .footer-str__formblock {
 	display: none;
 	padding-top: 20px;
+	background-color: #fff;
 }
 
 .footer-str__formblock--title {
@@ -1389,8 +1400,7 @@ p{
 }
 
 .footer-str__form {
-	padding-bottom: 15px;
-	width: 324px; /*&--mark-right {
+	padding-bottom: 15px; /*&--mark-right {
         background-image: url(../img/arrow-right.png);
         background-repeat: no-repeat;
         background-position: 96% center;
@@ -3265,7 +3275,7 @@ p{
 	content: "\00B7";
 	margin-right: 0;
 	position: absolute;
-	top: 0;
+	top: 11px;
 	left: -11px;
 	font-size: 32px;
 	color: #ff7200;
@@ -4157,6 +4167,10 @@ p{
 
 .footer-str__block--pl {
 	padding-left: 0;
+}
+
+.footer-str__itemappl-block {
+	flex-basis: 100%;
 }
 
 .footer-str__itemappl {
