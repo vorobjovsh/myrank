@@ -972,6 +972,10 @@ p{
 	position: relative;
 }
 
+.uservisible-str__item--addmain:hover {
+	text-decoration: underline !important;
+}
+
 .uservisible-str__item--addmain::before {
 	content: '';
 	position: absolute;
