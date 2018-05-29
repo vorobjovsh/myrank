@@ -64,6 +64,7 @@
 .footer-str__itemleft {
   -js-display: flex;
    display: flex;
+  position: relative;
 }
 
 .footer-str__photo {
@@ -81,6 +82,51 @@
 
 .footer-str__linkname {
 
+}
+
+/*.footer-str__number {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #ff7200;
+  padding: 3px;
+  top: 28px;
+  left: 28px;
+  font-size: 8px;
+  color: #ff7200;
+  background-color: #fff;
+  line-height: 1;
+}*/
+
+.footer-str__circle {
+
+	width: 20px;
+	text-align: center;
+	border-radius: 100%;
+	display: inline-block;
+    position: absolute;
+    border: 1px solid #ff7200;
+    //padding: 3px;
+    top: 28px;
+    left: 28px;
+    background-color: #fff;
+
+
+
+  p {
+    display: block;
+	height: 0;
+	margin: 0;
+	padding: 50% 0;
+  }
+
+}
+
+.footer-str__number {
+    display: block;
+	transform: translateY(-50%);
+    font-size: 7px;
+    color: #ff7200;
 }
 
 .footer-str__itemright {

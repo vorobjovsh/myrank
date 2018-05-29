@@ -15,3 +15,4 @@
 //= scripts/components/scrolly.js
 //= scripts/components/select.js
 //= scripts/components/addbutton.js
+//= scripts/components/number.js
