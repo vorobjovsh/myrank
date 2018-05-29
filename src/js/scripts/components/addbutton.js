@@ -1,8 +1,4 @@
 // Скрипт, открывающий форму добавления сотрудников в футере
-const footerBlockUser = document.querySelector(".js-footer-user");
-
-const footerBlockAdmin = document.querySelector(".js-footer-admin");
-
 const btnToggle = {
   btn: null,
   jsblock: null,
