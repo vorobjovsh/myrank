@@ -1565,6 +1565,10 @@ body {
 	color: #226377;
 }
 
+.footer-str__form--selectbox:first-child.sel.active .sel__box {
+	z-index: 5;
+}
+
 .select1 {
 	width: 324px !important;
 	height: auto;

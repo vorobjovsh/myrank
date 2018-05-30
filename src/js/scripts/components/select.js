@@ -85,9 +85,15 @@ $('.sel').each(function() {
   });
 });
 
+const selectCount = {
+  count: 5
+};
+
 // Toggling the `.active` state on the `.sel`.
 $('.sel').click(function() {
+  selectCount.count = selectCount.count + 1;
   $(this).toggleClass('active');
+  $(this).find('.sel__box').css('z-index', selectCount.count);
 });
 
 // Toggling the `.selected` state on the options.

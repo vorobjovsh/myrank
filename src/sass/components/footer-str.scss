@@ -389,6 +389,10 @@
   color: #226377;
 }
 
+.footer-str__form--selectbox:first-child.sel.active .sel__box {
+  z-index: 5;
+}
+
 .select1  {
 	width: 324px !important;
 	//height: 40px;
@@ -408,3 +412,5 @@
 	//margin:3px 0 5px 0;
     cursor: pointer;
 }
+
+
