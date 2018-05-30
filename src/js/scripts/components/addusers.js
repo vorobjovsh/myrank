@@ -4,9 +4,15 @@ const jsAddUsers = document.querySelector(".js-adduser");
 function addUsersBtn(event) {
     event.preventDefault();
 
-       $("#myModal-employ-7").modal("show");
-    
+
+
        $("#myModal-infoadmin-7").modal("hide");
+
+       setTimeout(() => {
+
+              $("#myModal-employ-7").modal("show");
+
+       }, 100);
 
 }
 
@@ -18,9 +24,15 @@ const jsAddContacts = document.querySelector(".js-addcontacts");
 function addContactsBtn(event) {
     event.preventDefault();
 
-       $("#myModal-addcontact-7").modal("show");
-    
+
+
        $("#myModal-infoadmin-7").modal("hide");
+
+       setTimeout(() => {
+
+         $("#myModal-addcontact-7").modal("show");
+
+       }, 100);
 
 }
 

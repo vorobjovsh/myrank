@@ -602,6 +602,10 @@ p{
 	align-items: center;
 }
 
+#myModal-addcontact-7 {
+	overflow-y: auto !important;
+}
+
 .infoadmin-str--employs {
 	overflow-y: auto;
 	height: 427px;
@@ -785,6 +789,10 @@ p{
 
 .employ-str--subtitle {
 	display: none;
+}
+
+#myModal-employ-7 {
+	overflow-y: auto !important;
 }
 
 .infouser-str--bt {
