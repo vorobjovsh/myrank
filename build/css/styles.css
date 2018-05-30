@@ -926,7 +926,7 @@ body {
 	left: -12px;
 	width: 12px;
 	height: 1px;
-	background: #f95200;
+	background: #ff7200;
 }
 
 .uservisible-str__item {
@@ -934,7 +934,7 @@ body {
 	position: relative;
 	box-shadow: 0.5px 0.9px 3px #cfe0db;
 	margin-bottom: 10px;
-	border-left: 2px solid #f95200;
+	border-left: 2px solid #ff7200;
 	border-top: 1px solid #cfe0db;
 	border-right: 1px solid #cfe0db;
 	border-bottom: 1px solid #cfe0db; /*&:last-of-type {
@@ -943,9 +943,9 @@ body {
 }
 
 .uservisible-str__item:hover {
-	border-top: 1px solid #f95200;
-	border-right: 1px solid #f95200;
-	border-bottom: 1px solid #f95200;
+	border-top: 1px solid #ff7200;
+	border-right: 1px solid #ff7200;
+	border-bottom: 1px solid #ff7200;
 }
 
 .uservisible-str__item--mark {
@@ -994,7 +994,7 @@ body {
 	left: -13px;
 	width: 13px;
 	height: 1px;
-	background: #f95200;
+	background: #ff7200;
 }
 
 .uservisible-str__item--trash {
@@ -1052,7 +1052,7 @@ body {
 	left: -12px;
 	width: 1px;
 	height: calc(100% - 47px);
-	background: #f00;
+	background: #ff7200;
 }
 
 .uservisible-str__subitem {
@@ -1066,7 +1066,7 @@ body {
 }
 
 .uservisible-str__subitem:hover {
-	border: 1px solid #f95200;
+	border: 1px solid #ff7200;
 	box-sizing: border-box;
 }
 
@@ -1145,7 +1145,7 @@ body {
 	left: -33px;
 	width: 20px;
 	height: 1px;
-	background: #f95200;
+	background: #ff7200;
 }
 
 .uservisible-str__sublist > .uservisible-str__subitem::after {
@@ -1155,14 +1155,14 @@ body {
 	left: -12px;
 	width: 12px;
 	height: 1px;
-	background: #f95200;
+	background: #ff7200;
 }
 
 .uservisible-str__link--addmain {
 	display: inline-block;
 	padding: 14px 10px 13px 38px;
 	cursor: pointer;
-	border: 1px solid #f95200;
+	border: 1px solid #ff7200;
 	position: relative;
 }
 
@@ -1189,7 +1189,7 @@ body {
 	left: -33px;
 	width: 21px;
 	height: 1px;
-	background: #f95200;
+	background: #ff7200;
 }
 
 .footer-str {
@@ -1399,7 +1399,7 @@ body {
 
 .footer-str__searchlink:hover {
 	text-decoration: none;
-	border-bottom: none;
+	border-bottom: 1px solid #fff;
 }
 
 .footer-str__formblock {
