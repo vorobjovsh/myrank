@@ -50,6 +50,7 @@ p{
 	padding-left: 0;
 	padding-right: 0;
 	margin-bottom: 0;
+	padding-bottom: 0 !important;
 }
 
 .wrapper-str--bt {
@@ -441,6 +442,10 @@ p{
 	-js-display: flex;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.maket-8 .subdivision-str {
+	border-bottom: none;
 }
 
 .subdivision-str__left {
@@ -1356,6 +1361,7 @@ p{
 
 .footer-str__search {
 	padding-top: 25px;
+	padding-bottom: 20px;
 	-js-display: flex;
 	display: flex;
 	justify-content: center;
