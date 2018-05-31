@@ -114,14 +114,6 @@ body {
 	background-color: #ff7200;
 }
 
-.wrapper-str--addbtn:active {
-	border: 1px solid red;
-}
-
-.wrapper-str--addbtn:focus {
-	border: 1px solid red;
-}
-
 .wrapper-str--ex {
 	border-bottom: 1px dashed #333;
 }

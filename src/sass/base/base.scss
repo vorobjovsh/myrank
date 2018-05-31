@@ -88,15 +88,6 @@ body {
     display: block;
     padding: 9px 36px;
     background-color: #ff7200;
-
-    &:active {
-      border: 1px solid red;
-    }
-
-    &:focus {
-      border: 1px solid red;
-    }
-
   }
 
   &--ex {
