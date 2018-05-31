@@ -1,3 +1,4 @@
+// Полифилл matches для IE
 (function(e) {
     var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
     !matches ? (e.matches = e.matchesSelector = function matches(selector) {
