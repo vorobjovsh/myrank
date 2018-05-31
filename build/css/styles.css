@@ -761,14 +761,14 @@ button::-moz-focus-inner {
 }
 
 .employ-str--block .footer-str__circle {
-	width: 20px;
+	width: 27px;
 	text-align: center;
 	border-radius: 100%;
 	display: inline-block;
 	position: absolute;
 	border: 1px solid #ff7200;
-	top: 20px;
-	left: 22px;
+	top: 22px;
+	left: 16px;
 	background-color: #fff;
 }
 
@@ -1319,7 +1319,7 @@ button::-moz-focus-inner {
 }*/
 
 .footer-str__circle {
-	width: 20px;
+	width: 27px;
 	text-align: center;
 	border-radius: 100%;
 	display: inline-block;
@@ -1341,7 +1341,7 @@ button::-moz-focus-inner {
 	display: block;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
-	font-size: 7px;
+	font-size: 10px;
 	color: #ff7200;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
