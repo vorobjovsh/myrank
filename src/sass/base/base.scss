@@ -88,6 +88,15 @@ body {
     display: block;
     padding: 9px 36px;
     background-color: #ff7200;
+
+    &:active {
+      border: 1px solid red;
+    }
+
+    &:focus {
+      border: 1px solid red;
+    }
+
   }
 
   &--ex {
@@ -121,4 +130,9 @@ body {
    background-color: hsla(0, 0%, 86%, 0.6) !important;
 }
 
-
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: none !important;
+}

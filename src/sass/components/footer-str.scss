@@ -173,6 +173,25 @@
    border-right: 1px solid #dcdcdc;
    border-bottom: 1px solid #dcdcdc;
    border-radius: none !important;
+
+    &:active {
+      border-top: 1px solid red;
+      border-right: 1px solid red;
+      border-bottom: 1px solid red;
+    }
+
+    &:focus {
+      border-top: 1px solid red;
+      border-right: 1px solid red;
+      border-bottom: 1px solid red;
+    }
+
+    &:hover {
+      border-top: 1px solid red;
+      border-right: 1px solid red;
+      border-bottom: 1px solid red;
+    }
+
 }
 
 .footer-str__applicatnew {

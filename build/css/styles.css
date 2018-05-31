@@ -114,6 +114,14 @@ body {
 	background-color: #ff7200;
 }
 
+.wrapper-str--addbtn:active {
+	border: 1px solid red;
+}
+
+.wrapper-str--addbtn:focus {
+	border: 1px solid red;
+}
+
 .wrapper-str--ex {
 	border-bottom: 1px dashed #333;
 }
@@ -139,6 +147,15 @@ body {
 
 .modal {
 	background-color: rgba(219, 219, 219, 0.6) !important;
+}
+
+button:active,
+button:focus {
+	outline: none !important;
+}
+
+button::-moz-focus-inner {
+	border: none !important;
 }
 
 /*body {
@@ -1361,6 +1378,24 @@ body {
 	border-right: 1px solid #dcdcdc;
 	border-bottom: 1px solid #dcdcdc;
 	border-radius: none !important;
+}
+
+.footer-str__trash:active {
+	border-top: 1px solid red;
+	border-right: 1px solid red;
+	border-bottom: 1px solid red;
+}
+
+.footer-str__trash:focus {
+	border-top: 1px solid red;
+	border-right: 1px solid red;
+	border-bottom: 1px solid red;
+}
+
+.footer-str__trash:hover {
+	border-top: 1px solid red;
+	border-right: 1px solid red;
+	border-bottom: 1px solid red;
 }
 
 .footer-str__applicatnew {
