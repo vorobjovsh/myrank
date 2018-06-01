@@ -72,6 +72,19 @@ function addZoomContact(event) {
 
           }
 
+          if(elem.classList.contains("uservisible-str__sublink--imggps") || elem.matches(".uservisible-str__sublink--imggps > use")) {
+
+           addZoomIcons.classList.remove("js-uservisible-str--zoomicons");
+           //console.log('Employ');
+           $("#myModal-addcontact-7").modal("show");
+
+           setTimeout(() => {
+            btnTrashArr.addEventListener("click", zoomIconsBlock);
+          }, 1000);
+
+
+          }
+
       } else {
         btnTrashArr.addEventListener("click", zoomIconsBlock);
       }
@@ -139,6 +152,19 @@ function addZoomContactUser(event) {
           }
 
           if(elem.classList.contains("uservisible-str__sublink--imgman") || elem.matches(".uservisible-str__sublink--imgman > use")) {
+
+           addZoomIcons.classList.remove("js-uservisible-str--zoomicons");
+
+           $("#myModal-infouser-8").modal("show");
+
+           setTimeout(() => {
+            userItem.addEventListener("click", zoomIconsBlockUser);
+          }, 1000);
+
+
+          }
+
+          if(elem.classList.contains("uservisible-str__sublink--imggps") || elem.matches(".uservisible-str__sublink--imggps> use")) {
 
            addZoomIcons.classList.remove("js-uservisible-str--zoomicons");
 

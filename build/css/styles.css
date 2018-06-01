@@ -818,6 +818,10 @@ button::-moz-focus-inner {
 	width: 718px;
 }
 
+.infouser-str--margin {
+	margin: 15px auto;
+}
+
 .infouser-str--close {
 	text-align: right;
 	opacity: 1 !important;

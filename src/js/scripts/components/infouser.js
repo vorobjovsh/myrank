@@ -38,6 +38,16 @@ function addInfoUser(event) {
        $("#myModal-infouser-8").modal("show");
     }
 
+     if(elem.classList.contains("uservisible-str__sublink--imggps") && wicon > 1023) {
+
+       $("#myModal-infouser-8").modal("show");
+    }
+
+    if(elem.matches(".uservisible-str__sublink--imggps > use") && wicon > 1023) {
+
+       $("#myModal-infouser-8").modal("show");
+    }
+
 }
 
 userItem.addEventListener("click", addInfoUser);
