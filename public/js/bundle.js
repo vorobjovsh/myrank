@@ -902,8 +902,8 @@ function addBtnFooter(event) {
             btnToggle.border.classList.remove("footer-str__itemappl--border");
         }
 
-        elem.parentNode.nextSibling.classList.add("js-block");
-        btnToggle.jsblock = elem.parentNode.nextSibling;
+        elem.parentNode.nextElementSibling.classList.add("js-block");
+        btnToggle.jsblock = elem.parentNode.nextElementSibling;
 
         elem.parentNode.parentNode.classList.add("footer-str__itemappl--border");
         btnToggle.border = elem.parentNode.parentNode;
