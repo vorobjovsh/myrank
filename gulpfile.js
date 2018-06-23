@@ -24,6 +24,32 @@ const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 
+// Создаем таск для папки assets
+gulp.task("assets", () => {
+  // Берем все файлы из папки assets в папке src
+  return (
+    gulp
+      .src("./src/assets/*")
+      // выкидываем папку assets в папку build
+      .pipe(gulp.dest("./build/assets"))
+      // говорим browser-sync о том что пора перезагрузить барузер, так как файл изменился
+      .pipe(server.stream())
+  );
+});
+
+// Создаем таск для папки assets (в продакшен)
+gulp.task("assets-prod", () => {
+  // Берем все файлы из папки assets в папке src
+  return (
+    gulp
+      .src("./src/assets/*")
+      // выкидываем папку assets в папку build
+      .pipe(gulp.dest("./public/assets"))
+      // говорим browser-sync о том что пора перезагрузить барузер, так как файл изменился
+      .pipe(server.stream())
+  );
+});
+
 // Создаем таск для сборки html файлов
 gulp.task("html", () => {
   // Берем все файлы с расширением html в папке src
@@ -342,6 +368,7 @@ gulp.task("del:public", () => {
 gulp.task("build", function(done) {
   sequence(
     "del:build",
+    "assets",  
     "svg-sprite",
     "webp",
     "images",
@@ -362,6 +389,7 @@ gulp.task("build", function(done) {
 gulp.task("public", function(done) {
   sequence(
     "del:public",
+    "assets-prod",   
     "images-prod",
     "css-prod",
     "css-ie-prod",
